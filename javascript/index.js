@@ -22,3 +22,12 @@ console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
 console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']))
 console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']))
 console.log(isValidWalk(['w']))
+
+
+//Task: Subsrting fun
+function nthChar(words) {
+    return words.reduce((accum, el, i) => accum + el[i], '');
+}
+
+console.log(nthChar(['yoda', 'best', 'has']));
+console.log(nthChar([]));
