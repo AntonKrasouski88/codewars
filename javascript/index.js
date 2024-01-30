@@ -31,3 +31,33 @@ function nthChar(words) {
 
 console.log(nthChar(['yoda', 'best', 'has']));
 console.log(nthChar([]));
+
+//Task: Count the divisors of a number
+function getDivisorsCnt(n) {
+    let count = 1;
+
+    if (n === 1) return 1
+
+    for (let i = 1; i <= n/2; i++) { 
+        if(Number.isInteger(n/i)) {
+            count++
+        }
+    }
+
+    return count
+}
+
+console.log(getDivisorsCnt(1));
+console.log(getDivisorsCnt(10));
+console.log(getDivisorsCnt(11));
+console.log(getDivisorsCnt(54));
+
+//Task: Number of People in the Bus
+const number = (busStops) => {
+    return busStops.reduce((acc, el) => acc + el[0] - el[1], 0)
+}
+
+console.log(number([[10,0],[3,5],[5,8]]));
+console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]));
+console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]));
+console.log(number([[0,0]]));
