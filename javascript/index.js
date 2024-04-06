@@ -69,3 +69,15 @@ function number (array) {
 
 console.log(number([]));
 console.log(number(['a', 'b', 'c']));
+
+//Task: Don't give me five
+function dontGiveMeFive (start, end) {
+    let count = 0;
+    for (let i = start; i <= end; i++) {
+        `${i}`.indexOf('5') === -1 && count++;
+    }
+    return count
+}
+
+console.log(dontGiveMeFive(1,73));
+console.log(dontGiveMeFive(4,17));
