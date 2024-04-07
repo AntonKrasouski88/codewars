@@ -81,3 +81,91 @@ function dontGiveMeFive (start, end) {
 
 console.log(dontGiveMeFive(1,73));
 console.log(dontGiveMeFive(4,17));
+
+//Task: Count the divisors of a number
+/* function getDivisorsCnt (n) {
+    let count = 2;
+    if(n === 1) {
+        return 1;
+    }
+    if (n % 2 === 0) {
+        for (let i = 2; i <= n/2; i++) {
+            Number.isInteger(n/i) && count++
+        }
+    } else {
+        for (let i = 3; i <= n/2; i += 2) {
+            Number.isInteger(n/i) && count++
+        }
+    }
+    return count
+}
+
+console.log(getDivisorsCnt(1));
+console.log(getDivisorsCnt(10));
+console.log(getDivisorsCnt(11));
+console.log(getDivisorsCnt(54)); */
+
+function getDivisorsCount (n) {
+    let arr = []
+    let count = 0;
+    if (n===1) return 1;
+
+    while (n > 1) {
+        for (let i = 2; i <= n; i++) {
+            if(Number.isInteger(n/i)) {
+                arr.push(i);
+                n /= i
+                break
+            }
+        }
+    }
+
+    const objNum = arr.reduce((acc, el) => {
+        if(acc.hasOwnProperty(el)) {
+            acc[el] += 1;
+        } else {
+            acc[el] = 1;
+        }
+        return acc
+    },{})
+
+    count = Object.values(objNum).reduce((acc, el) => {
+        acc *= el + 1;
+        return acc;
+    }, 1)
+    return count
+}
+
+function getDivisorsCnt(n){
+    var num=0;
+    if(n==1) return 1;
+    if(n%Math.sqrt(n)==0) num++;
+    for(var i=1;i<Math.sqrt(n);i++){
+        if(n%i==0){
+            num+=2;
+        }
+    }
+    return num;
+}
+
+console.log(getDivisorsCount(25));
+console.log(getDivisorsCount(11));
+console.log(getDivisorsCount(54));
+
+// The best decision
+function getDivisorsCnt(n){
+    var num=0;
+    if(n==1) return 1;
+    if(n%Math.sqrt(n)==0) num++;
+    for(var i=1;i<Math.sqrt(n);i++){
+        if(n%i==0){
+            num+=2;
+        }
+    }
+    return num;
+}
+
+
+console.log(getDivisorsCnt(25));
+console.log(getDivisorsCnt(11));
+console.log(getDivisorsCnt(54));
