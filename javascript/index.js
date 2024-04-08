@@ -169,3 +169,18 @@ function getDivisorsCnt(n){
 console.log(getDivisorsCnt(25));
 console.log(getDivisorsCnt(11));
 console.log(getDivisorsCnt(54));
+
+//Task: Sum of the first
+function SeriesSum(n) {
+    let result = 0;
+
+    for(let i = 0; i < n; i++) {
+        result += 1 / (3 * i + 1);
+    }
+    return result.toFixed(2)
+}
+
+console.log(SeriesSum(2));
+console.log(SeriesSum(2));
+console.log(SeriesSum(3));
+console.log(SeriesSum(1));
