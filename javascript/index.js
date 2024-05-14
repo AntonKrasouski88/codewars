@@ -184,3 +184,27 @@ console.log(SeriesSum(2));
 console.log(SeriesSum(2));
 console.log(SeriesSum(3));
 console.log(SeriesSum(1));
+
+
+//Task: Check the exam
+function checkExam(array1, array2) {
+    let points = 0;
+
+    for(let i = 0; i < array1.length; i++) {
+        array1[i] === array2[i] && (points += 4);
+        (array1[i] !== array2[i]) && array2[i] && (points -= 1);
+    }
+
+    return points > 0 ? points: 0
+}
+
+console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
+console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
+console.log(checkExam(["a", "a", "b", "c"], ["a", "a", "b", "c"]));
+console.log(checkExam(["b", "c", "b", "a"], ["",  "a", "a", "c"]));
+console.log(checkExam(["b","c","a","a","c","a","a","c","a","c","a","a","b","c","b","c"],
+                      ["c","c","c","c", "","a","a","b","a","a", "","a","a", "", "","b"]
+));
+console.log(checkExam(["c","b","c","b","c","a","a","a","a","c","c","a"], 
+                      ["a","a", "","b", "","a", "","b","a", "", "","b"]
+));
