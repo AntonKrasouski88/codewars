@@ -208,3 +208,13 @@ console.log(checkExam(["b","c","a","a","c","a","a","c","a","c","a","a","b","c","
 console.log(checkExam(["c","b","c","b","c","a","a","a","a","c","c","a"], 
                       ["a","a", "","b", "","a", "","b","a", "", "","b"]
 ));
+
+
+//Task: Sentence Smash
+function smash(words) {
+    return words.join(' ')
+}
+
+console.log(smash(["this", "is", "a", "really", "long", "sentence"]));
+console.log(smash([]));
+console.log(smash(["Hello"]));
