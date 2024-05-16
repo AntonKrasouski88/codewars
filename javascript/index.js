@@ -218,3 +218,11 @@ function smash(words) {
 console.log(smash(["this", "is", "a", "really", "long", "sentence"]));
 console.log(smash([]));
 console.log(smash(["Hello"]));
+
+
+//Task: The highest profit wins!
+function minMax(arr) {
+    return [Math.min(...arr), Math.max(...arr)];
+}
+
+console.log(minMax([1,2,3,4,5]))
