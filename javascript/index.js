@@ -226,3 +226,18 @@ function minMax(arr) {
 }
 
 console.log(minMax([1,2,3,4,5]))
+
+
+//Task: find the missing element between two arrays
+function findMissing(arr1, arr2) {
+    arr1.sort();
+    arr2.sort();
+    
+    for(let i = 0; i < arr1.length; i++) {
+        if(arr1[i] !== arr2[i]) {
+            return arr1[i]
+        }
+    }
+}
+
+console.log(findMissing([1, 2, 3], [1, 3]));
