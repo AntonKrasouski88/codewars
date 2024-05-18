@@ -241,3 +241,27 @@ function findMissing(arr1, arr2) {
 }
 
 console.log(findMissing([1, 2, 3], [1, 3]));
+
+
+//Task: Your order, please
+/* function order(words) {
+    let wordsSort = [];
+    let arr1 = words.split(' ');
+
+    arr2 = arr1.map(el => el.split('').sort());
+
+    for(let i = 0; i < arr1.length; i++) {
+        wordsSort[+arr2[i][0] - 1] = arr1[i];
+    }
+    
+    return wordsSort.join(' ');
+}
+
+console.log(order("is2 Thi1s T4est 3a")); */
+
+function order(words){
+  
+    return words.split(' ').sort(function(a, b){
+        return a.match(/\d/) - b.match(/\d/);
+    }).join(' ');
+}  
