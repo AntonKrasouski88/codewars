@@ -265,3 +265,12 @@ function order(words){
         return a.match(/\d/) - b.match(/\d/);
     }).join(' ');
 }  
+
+
+//Task: Working with arrays I(and why your code fails in some)
+function withoutLast(arr) {
+    return arr.slice(0, -1)
+}
+
+console.log(withoutLast([1, 2, 3, 4, 5]));
+console.log(withoutLast([ 93, 57, 28, 97, 88, 95, 94, 1, 86, 75 ]));
