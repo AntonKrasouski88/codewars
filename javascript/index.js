@@ -274,3 +274,23 @@ function withoutLast(arr) {
 
 console.log(withoutLast([1, 2, 3, 4, 5]));
 console.log(withoutLast([ 93, 57, 28, 97, 88, 95, 94, 1, 86, 75 ]));
+
+
+//Task: Detect Pangram
+/* function isPangram(string) {
+    const regexWithLetter = /[a-z]/ig;
+    let str = string.toLowerCase().match(regexWithLetter);
+    str = [...new Set(str)].sort();
+
+    return str.length === 26
+} */
+
+function isPangram(string){
+    string = string.toLowerCase();
+    return "abcdefghijklmnopqrstuvwxyz".split("").every(function(x){
+      return string.indexOf(x) !== -1;
+    });
+}
+
+console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+console.log(isPangram("This is not a pangram."));
