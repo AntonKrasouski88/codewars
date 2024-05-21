@@ -294,3 +294,37 @@ function isPangram(string){
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog."));
 console.log(isPangram("This is not a pangram."));
+
+
+//Task: split strings
+function solution(str) {
+    let arr = [];
+    let newStr = '';
+
+    for(let char of str){
+        newStr += char;
+
+        if(newStr.length == 2) {
+            arr.push(newStr);
+            newStr = '';
+;        }
+    }
+
+    if(arr.length !== str.length / 2) {
+        arr.push(`${str[str.length - 1]}_`)
+    }
+
+    return arr
+}
+
+/* function solution(str){
+    arr = [];
+    for(let i = 0; i < str.length; i += 2){
+      second = str[i+1] || '_';
+      arr.push(str[i] + second);
+    }
+    return arr;
+  }
+ */
+console.log(solution('abcdef'));
+console.log(solution("abcdefg"));
