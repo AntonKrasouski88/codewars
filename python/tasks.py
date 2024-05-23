@@ -25,3 +25,30 @@ print(count_sheep(0))
 
 #def count_sheep(n):
     #return ''.join(f"{i} sheep..." for i in range(1,n+1))
+
+
+
+#Task: CSV representation of array
+def to_csv_text(array):
+    str = ''
+
+    for arr in array:
+        for i in range(0, len(arr)):
+            if i == len(arr) - 1:
+                str += f'{(arr[i])}'
+                str += '\n'
+            else:
+                str += f'{(arr[i])},'
+
+    return str[:-1]
+
+#def to_csv_text(array):
+#    return '\n'.join(','.join(map(str,line)) for line in array)
+
+
+print(to_csv_text([
+            [0, 1, 2, 3, 45],
+            [10, 11, 12, 13, 14],
+            [20, 21, 22, 23, 24],
+            [30, 31, 32, 33, 34]
+        ]))
