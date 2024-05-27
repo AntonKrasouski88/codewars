@@ -328,3 +328,11 @@ function solution(str) {
  */
 console.log(solution('abcdef'));
 console.log(solution("abcdefg"));
+
+
+//Task: Sum mixed array
+function sumMix(arr) {
+    return arr.reduce((acc, el) => acc + (+el), 0)
+}
+
+console.log(sumMix(['3', 6, 6, 0, '5', 8, 5, '6', 2,'0']));
