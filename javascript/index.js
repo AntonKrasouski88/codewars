@@ -371,3 +371,22 @@ function countSheep(num) {
 }
 
 console.log(countSheep(3));
+
+
+//Task: Perfect Number Verifier
+function isPerfect(n) {
+    let sum = 0;
+
+    for(let i = 1; i <= n/2 + 1; i++) {
+        if(n % i == 0) {
+            sum += i + n / i;
+        }
+    }
+
+    return sum == n && n > 1;
+}
+
+console.log(isPerfect(6));
+console.log(isPerfect(28));
+console.log(isPerfect(1));
+console.log(isPerfect(23459879034));
