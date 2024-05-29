@@ -358,3 +358,16 @@ function isLeapYear(year) {
 
 console.log(isLeapYear(2020));
 console.log(isLeapYear(2100));
+
+
+//Task: If you can't sleep, just count sheep
+function countSheep(num) {
+    let str = '';
+    for(let i = 1; i <= num; i++) {
+        str += `${i} sheep...`
+    }
+    
+    return str
+}
+
+console.log(countSheep(3));
