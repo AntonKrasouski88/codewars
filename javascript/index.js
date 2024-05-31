@@ -390,3 +390,13 @@ console.log(isPerfect(6));
 console.log(isPerfect(28));
 console.log(isPerfect(1));
 console.log(isPerfect(23459879034));
+
+
+//Task: How many arguments
+function args_count(...rest) {
+    return rest.length
+}
+
+console.log(args_count());
+console.log(args_count('a'));
+console.log(args_count('a', 'b'));
