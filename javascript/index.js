@@ -400,3 +400,20 @@ function args_count(...rest) {
 console.log(args_count());
 console.log(args_count('a'));
 console.log(args_count('a', 'b'));
+
+
+//Task: Build a square
+const generateShape = (integer) => {
+    str = ''
+    for(let i = 0; i < integer; i++) {
+        if(i !== integer - 1){
+            str += `${'*'.repeat(integer)}\n`;
+        } else {
+            str += '*'.repeat(integer)
+        }
+    }
+    
+    return str
+}
+
+console.log(generateShape(8));
