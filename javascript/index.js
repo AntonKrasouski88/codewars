@@ -417,3 +417,10 @@ const generateShape = (integer) => {
 }
 
 console.log(generateShape(8));
+
+
+//Task: Smallest value of in array
+const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr));
+
+console.log(min([1,2,3,4,5], 'value'));
+console.log(min([1,2,3,4,5], 'index'));
