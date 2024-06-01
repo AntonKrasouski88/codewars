@@ -424,3 +424,18 @@ const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.ind
 
 console.log(min([1,2,3,4,5], 'value'));
 console.log(min([1,2,3,4,5], 'index'));
+
+
+//Task: Find the cappitals
+function cappitals(word) {
+    let arr = [];
+
+    for(let i = 0; i < word.length; i++) {
+        if(word[i] === word[i].toUpperCase()) {
+            arr.push(i)
+        }
+    }
+    return arr
+}
+
+console.log(cappitals('CodEWaRs'));
