@@ -448,3 +448,23 @@ function smallEnough(a, limit) {
 
 console.log(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100));
 console.log(smallEnough([101, 45, 75, 105, 99, 107], 107));
+
+
+//Task: Insert dash
+function insertDash(num) {
+    let str = '' + num;
+    let result = '';
+    for(let i = 0; i < str.length; i++) {
+        if(+str[i] % 2 !== 0 && +str[i + 1] % 2 !== 0 && i !== str.length - 1) {
+            result += str[i] + '-';
+        } else {
+            result += str[i];
+        }
+    }
+    return result
+    //return String(num).replace(/([13579])(?=[13579])/g, '$1-');
+}
+
+console.log(insertDash(454793));
+console.log(insertDash(123456));
+console.log(insertDash(1003567));
