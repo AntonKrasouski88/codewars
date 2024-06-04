@@ -468,3 +468,19 @@ function insertDash(num) {
 console.log(insertDash(454793));
 console.log(insertDash(123456));
 console.log(insertDash(1003567));
+
+
+//Task: Scroll Text
+function scrollingText(text) {
+    let arr = [];
+    text = text.toUpperCase();
+
+    for(let i = 0; i < text.length; i++) {
+        arr.push(text);
+        text = text.slice(1) + text[0];
+    }
+
+    return arr;
+}
+
+console.log(scrollingText("CODEWARS"));
