@@ -484,3 +484,25 @@ function scrollingText(text) {
 }
 
 console.log(scrollingText("CODEWARS"));
+
+
+//Task: Lottery Ticket
+function bingo(ticket, win) {
+    let num = ticket.reduce((acc, el) => {
+        for (let char of el[0]) {
+            if(char.charCodeAt(char)=== el[1]) {
+                acc += 1;
+                break;
+            }
+        }
+        return acc;
+    }, 0)
+    return num >= win ? 'Winner' : 'Loser';
+}
+
+console.log(bingo([['BHCW',87], ['PILSXIZV',86]], 1));
+console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 2));
+console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
+console.log(bingo([['FRZ',70], ['HX',69], ['HPAJNE',87], ['UQWHEB',68], ['LUVH',67], ['RU',80], ['XQOEQSKI',83]]));
+
+['BHCW',87]
