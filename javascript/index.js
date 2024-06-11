@@ -506,3 +506,11 @@ console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
 console.log(bingo([['FRZ',70], ['HX',69], ['HPAJNE',87], ['UQWHEB',68], ['LUVH',67], ['RU',80], ['XQOEQSKI',83]]));
 
 ['BHCW',87]
+
+//Task: Sort array by string length
+function sortByLength(arr) {
+    const sortLengtWordArray = arr.sort((a, b) => a.length - b.length);
+    return sortLengtWordArray
+}
+
+console.log(sortByLength(["Beg", "Life", "I", "To"]));
