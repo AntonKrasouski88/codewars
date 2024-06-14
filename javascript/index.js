@@ -514,3 +514,11 @@ function sortByLength(arr) {
 }
 
 console.log(sortByLength(["Beg", "Life", "I", "To"]));
+
+
+//Task: Homogenous array
+function filterHomogenous(arrays) {
+    return arrays.filter(arr => arr.length !== 0 && arr.every((el, _, arr) => typeof(el) === typeof(arr[0])))
+}
+
+console.log(filterHomogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]));
