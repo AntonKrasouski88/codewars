@@ -522,3 +522,19 @@ function filterHomogenous(arrays) {
 }
 
 console.log(filterHomogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]));
+
+
+//Task: row weights
+function rowWeights(arr) {
+    let weights = [0, 0];
+    arr.forEach((el, index) => {
+        if(index % 2 === 0) {
+            weights[0] += el; 
+        } else {
+            weights[1] += el;
+        }
+    });
+    return weights;
+}
+
+console.log(rowWeights([50,60,70,80]));
