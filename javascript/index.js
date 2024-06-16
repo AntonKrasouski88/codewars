@@ -557,3 +557,12 @@ function expandedForm(num) {
 }
 
 console.log(expandedForm(70304));
+
+
+//Task: Is every value in the array an array
+function arrCheck (value) {
+    return value.every(el => Array.isArray(el));
+}
+
+console.log(arrCheck([[1],[2]]));
+console.log(arrCheck(['A', 'R', 'R', 'A', 'Y']));
