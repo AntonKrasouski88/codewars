@@ -538,3 +538,22 @@ function rowWeights(arr) {
 }
 
 console.log(rowWeights([50,60,70,80]));
+
+
+//Task: Write Number in Expanded Form
+function expandedForm(num) {
+    let arr = num.toString().split('');
+    let result = '';
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] !== '0') {
+            if(result.length !== 0) {
+                result = result + ' + ' + arr[i].padEnd(arr.length - i, "0");
+            } else {
+                result = arr[i].padEnd(arr.length - i, "0");
+            }
+        }
+    }
+    return result
+}
+
+console.log(expandedForm(70304));
