@@ -566,3 +566,20 @@ function arrCheck (value) {
 
 console.log(arrCheck([[1],[2]]));
 console.log(arrCheck(['A', 'R', 'R', 'A', 'Y']));
+
+
+//Task: Playing with digits
+function digPow(n, p) {
+    let str = n.toString();
+    let sum = 0;
+    for(let i = 0; i < str.length; i++) {
+        sum += Math.pow(parseInt(str[i]), p + i);
+    }
+    if(sum === n) {
+        return -1;
+    } else {
+        return sum / n;
+    }
+}
+
+console.log(digPow(46288, 3));
