@@ -575,11 +575,13 @@ function digPow(n, p) {
     for(let i = 0; i < str.length; i++) {
         sum += Math.pow(parseInt(str[i]), p + i);
     }
-    if(sum === n) {
-        return -1;
-    } else {
+    if(sum % n === 0) {
         return sum / n;
-    }
+    } else {
+        return -1;
+    }       
 }
 
 console.log(digPow(46288, 3));
+console.log(digPow(92, 1));
+console.log(digPow(89, 1));
