@@ -585,3 +585,24 @@ function digPow(n, p) {
 console.log(digPow(46288, 3));
 console.log(digPow(92, 1));
 console.log(digPow(89, 1));
+
+//Task: Make a square box!
+function box(num) {
+    let arr = [];
+    let count = num;
+    while(count > 0) {
+        if(count === 1 || num == count) {
+            arr.push('-'.repeat(num));
+            count--;
+        } else {
+            arr.push('-' + ' '.repeat(num - 2) + '-');
+            count--;
+        }
+    }
+    return arr;
+}
+
+console.log(box(5));
+console.log(box(2));
+console.log(box(4));
+console.log(box(3));
