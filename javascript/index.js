@@ -621,3 +621,11 @@ function findMagic(arr) {
 
 console.log(findMagic([-20,-10,2,10,20]));
 console.log(findMagic([6, 5, 83, 5, 3, 18]));
+
+//Task: Email Address Obfuscator
+function obfuscate(email) {
+    //return email.split('').map(el => el == '@' ? ' [at] ': el == '.' ? ' [dot] ' : el).join('');
+    return email.replace(/@/gi, ' [at] ').replace(/\./gi, ' [dot] ')
+}
+
+console.log(obfuscate('user_name@example.com'));
