@@ -606,3 +606,18 @@ console.log(box(5));
 console.log(box(2));
 console.log(box(4));
 console.log(box(3));
+
+
+//Task: Magic index
+function findMagic(arr) {
+/*     for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === i) {
+            return arr[i];
+        }
+    }
+    return -1 */
+    return arr.findIndex(i => i == arr[i])
+}
+
+console.log(findMagic([-20,-10,2,10,20]));
+console.log(findMagic([6, 5, 83, 5, 3, 18]));
