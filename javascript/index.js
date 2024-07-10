@@ -629,3 +629,34 @@ function obfuscate(email) {
 }
 
 console.log(obfuscate('user_name@example.com'));
+
+
+//Task: Count the smile faces
+function countSmileys(arr) {
+    const correctSmile1 = [':)',':D',':-)',':-D', ':~)',':~D'];
+    const correctSmile2 = [';)',';D',';-)',';-D', ';~)',';~D'];
+    let count = 0;
+
+    for(smile of arr) {
+        if(smile[0] === ':') {
+            for (el of correctSmile1) {
+                if(smile === el) {
+                    count++;
+                }
+            }
+        }
+        if(smile[0] === ';') {
+            for (el of correctSmile2) {
+                if(smile == el) {
+                    count++;
+                }
+            }
+        }
+    }
+
+    return count
+}
+//const countSmileys = ss => ss.reduce((a, s) => a + /^[:;][-~]?[D)]$/.test(s), 0);
+
+console.log(countSmileys([':D',':~)',';~D',':)']));
+console.log(countSmileys([';]', ':[', ';*', ':$', ';-D']));
