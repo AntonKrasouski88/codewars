@@ -74,3 +74,19 @@ def dna_to_rna(dna):
 print(dna_to_rna("TTTT"))
 print(dna_to_rna("GCAT"))
 print(dna_to_rna("GACCGCCGCC"))
+
+
+# Task: Vowel Count
+def get_count(sentence):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    count = 0
+
+    for char in sentence:
+        if char in vowels:
+            count += 1
+
+    return count
+# return sum(c in 'aeiou' for c in s)
+
+print(get_count("aeiou"))
+print(get_count("bcdfghjklmnpqrstvwxz y"))
