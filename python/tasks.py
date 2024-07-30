@@ -101,3 +101,19 @@ def disemvowel(string_):
     return string_
 
 print(disemvowel("This website is for losers LOL!"))
+
+
+# Task: Find the divisors! 
+def divisors(n):
+    divisors = [i for i in range(2, int(n/2) + 1) if n%i == 0]
+    
+    if len(divisors) == 0:
+        return f"{n} is prime"
+    
+    return divisors
+
+print(divisors(15))
+print(divisors(253))
+print(divisors(24))
+print(divisors(3))
+print(divisors(13))
