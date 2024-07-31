@@ -117,3 +117,16 @@ print(divisors(253))
 print(divisors(24))
 print(divisors(3))
 print(divisors(13))
+
+# Task: Remove the minimum
+def remove_smallest(numbers):
+    new_numbers = numbers[:]
+    
+    if new_numbers:
+        new_numbers.remove(min(numbers))
+    
+    return new_numbers
+
+print(remove_smallest([1, 2, 3, 4, 5]))
+print(remove_smallest([]))
+print(remove_smallest([1, 2, 3, 1, 1]))
