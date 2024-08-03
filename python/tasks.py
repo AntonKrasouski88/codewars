@@ -130,3 +130,24 @@ def remove_smallest(numbers):
 print(remove_smallest([1, 2, 3, 4, 5]))
 print(remove_smallest([]))
 print(remove_smallest([1, 2, 3, 1, 1]))
+
+
+# Task: Find the stay number
+#def stray(arr):
+#    numbers = {}
+
+#    for n in arr:
+#        if str(n) in numbers:
+#            numbers[f'{n}'] = numbers[f'{n}'] + 1
+#        else:
+#             numbers[f'{n}'] = 1
+
+#    for key, value in numbers.items():
+#        if value == 1:
+#            return key 
+def stray(arr):
+    for n in arr:
+        if arr.count(n) == 1:
+            return n
+
+print(stray([1, 1, 1, 1, 1, 2]))
