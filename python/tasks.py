@@ -151,3 +151,19 @@ def stray(arr):
             return n
 
 print(stray([1, 1, 1, 1, 1, 2]))
+
+# Task: Money, money, money
+def calculate_years(principal, interest, tax, desired):
+    year = 0
+
+    while principal < desired:
+        n = principal * interest
+        principal += n - (n * tax)
+        year += 1
+
+    return year
+
+
+print(calculate_years(1000, 0.05, 0.18, 1100))
+print(calculate_years(1000,0.01625,0.18,1200))
+print(calculate_years(1000,0.05,0.18,1000))
