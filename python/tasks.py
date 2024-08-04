@@ -167,3 +167,17 @@ def calculate_years(principal, interest, tax, desired):
 print(calculate_years(1000, 0.05, 0.18, 1100))
 print(calculate_years(1000,0.01625,0.18,1200))
 print(calculate_years(1000,0.05,0.18,1000))
+
+
+# Task: Unique in order
+def unique_in_order(sequence):
+    chars = []
+    char = ''
+    for i in range(len(sequence)):
+        if char != sequence[i]:
+            char = sequence[i]
+            chars.append(char)    
+
+    return chars
+
+print(unique_in_order(''))
