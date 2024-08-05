@@ -181,3 +181,17 @@ def unique_in_order(sequence):
     return chars
 
 print(unique_in_order(''))
+
+
+# Task: Count the digit
+def nb_dig(n, d):
+    numbers = [i**2 for i in range(n + 1)]
+    count = 0
+    
+    for number in numbers:
+        count += str(number).count(str(d))
+    
+    return count
+
+print(nb_dig(10, 1))
+print(nb_dig(5750, 0))
