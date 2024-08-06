@@ -195,3 +195,19 @@ def nb_dig(n, d):
 
 print(nb_dig(10, 1))
 print(nb_dig(5750, 0))
+
+
+# Round up to the next multiple of 5
+def round_to_next(n):
+#    if n == 0:
+#        return n    
+#    for i in range(n, n + 6):
+#        if i % 5 == 0:
+#            return i
+    return n + (5 - n) % 5 
+        
+print(round_to_next(0))
+print(round_to_next(3))
+print(round_to_next(5))
+print(round_to_next(21))
+print(round_to_next(-5))
