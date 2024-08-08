@@ -220,3 +220,11 @@ def sequence_sum(begin_number, end_number, step):
 print(sequence_sum(1, 5, 1))
 print(sequence_sum(2, 2, 2))
 print(sequence_sum(16, 15, 3))
+
+
+# Task: Find the middle element
+def gimme(array):
+    return array.index(sorted(array)[1])
+
+
+print(gimme([2,3,1]))
