@@ -211,3 +211,12 @@ print(round_to_next(3))
 print(round_to_next(5))
 print(round_to_next(21))
 print(round_to_next(-5))
+
+
+# Task: Sum of sequence
+def sequence_sum(begin_number, end_number, step):
+    return sum([i for i in range(begin_number, end_number + 1, step)])
+
+print(sequence_sum(1, 5, 1))
+print(sequence_sum(2, 2, 2))
+print(sequence_sum(16, 15, 3))
