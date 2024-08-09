@@ -211,3 +211,18 @@ print(round_to_next(3))
 print(round_to_next(5))
 print(round_to_next(21))
 print(round_to_next(-5))
+
+
+# Task: Make a function that does arithmetic
+def arithmetic(a, b, operator):
+    if operator == 'add':
+        return a + b
+    elif operator == 'subtract':
+        return a - b
+    elif operator == 'multiply':
+        return a * b
+    elif operator == 'divide':
+        return a / b
+    
+
+print(arithmetic(1, 2, "add"))
