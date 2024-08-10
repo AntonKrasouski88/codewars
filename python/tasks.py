@@ -244,3 +244,11 @@ def arithmetic(a, b, operator):
 
 print(arithmetic(1, 2, "add"))
 
+
+# Task: Sort numbers
+def solution(nums):
+    return sorted(nums) if nums else []
+
+
+print(solution([1,2,3,10,5]))
+print(solution(None))
