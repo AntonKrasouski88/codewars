@@ -252,3 +252,11 @@ def solution(nums):
 
 print(solution([1,2,3,10,5]))
 print(solution(None))
+
+
+# Task: Double Every Other
+def double_every_other(lst):
+    return [val * 2 if i % 2 else val for i, val in enumerate(lst)]
+
+
+print(double_every_other([1,2,3,4,5]))
