@@ -660,3 +660,11 @@ function countSmileys(arr) {
 
 console.log(countSmileys([':D',':~)',';~D',':)']));
 console.log(countSmileys([';]', ':[', ';*', ':$', ';-D']));
+
+
+//Task: Two oldest ages
+function twoOldestAges(ages) {
+    return ages.sort((a,b) => a - b).slice(- 2)
+}
+
+console.log(twoOldestAges([1,5,87,45,8,8]));
