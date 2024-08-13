@@ -668,3 +668,14 @@ function twoOldestAges(ages) {
 }
 
 console.log(twoOldestAges([1,5,87,45,8,8]));
+
+
+//Task: Anagram Detection
+function isAnagram(test, original) {
+    test = test.toLowerCase().split('').sort()
+    original = original.toLowerCase().split('').sort()
+
+    return test.join('')=== original.join('')   
+}
+
+console.log(isAnagram("foefet", "toffee"));
