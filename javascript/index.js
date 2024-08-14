@@ -679,3 +679,22 @@ function isAnagram(test, original) {
 }
 
 console.log(isAnagram("foefet", "toffee"));
+
+
+//Task: Find the divisors
+function divisors(integer) {
+    const arr = []
+    for(let i = 2; i <= Math.ceil(integer/2); i++) {
+        if(integer % i === 0) {
+            arr.push(i)
+        }
+    }
+    if(arr.length !== 0) {
+        return arr
+    } else {
+        return `${integer} is prime`
+    }
+}
+
+console.log(divisors(12));
+console.log(divisors(13));
