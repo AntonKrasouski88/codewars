@@ -698,3 +698,18 @@ function divisors(integer) {
 
 console.log(divisors(12));
 console.log(divisors(13));
+
+
+//Task: Unique in order
+function  uniqueInOrder(iterable) {
+    const arr = [];
+    
+    for(let i = 0; i < iterable.length; i++) {
+        
+      if(arr[arr.length - 1] !== iterable[i]) arr.push(iterable[i])
+    }
+    
+    return arr
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
