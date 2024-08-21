@@ -679,3 +679,37 @@ function isAnagram(test, original) {
 }
 
 console.log(isAnagram("foefet", "toffee"));
+
+
+//Task: Find the divisors
+function divisors(integer) {
+    const arr = []
+    for(let i = 2; i <= Math.ceil(integer/2); i++) {
+        if(integer % i === 0) {
+            arr.push(i)
+        }
+    }
+    if(arr.length !== 0) {
+        return arr
+    } else {
+        return `${integer} is prime`
+    }
+}
+
+console.log(divisors(12));
+console.log(divisors(13));
+
+
+//Task: Unique in order
+function  uniqueInOrder(iterable) {
+    const arr = [];
+    
+    for(let i = 0; i < iterable.length; i++) {
+        
+      if(arr[arr.length - 1] !== iterable[i]) arr.push(iterable[i])
+    }
+    
+    return arr
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
