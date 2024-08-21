@@ -260,3 +260,14 @@ def double_every_other(lst):
 
 
 print(double_every_other([1,2,3,4,5]))
+
+
+#Task: SimpleFun#176: Reverse Letter
+def reverse_letter(st):
+    reverse_letters = [char for char in st[::-1] if char.isalpha()]
+    return ''.join(reverse_letters)
+
+print(reverse_letter("krishan"))
+print(reverse_letter("ultr53o?n"))
+print(reverse_letter("ab23c"))
+print(reverse_letter("krish21an"))
