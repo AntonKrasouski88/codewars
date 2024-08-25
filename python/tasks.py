@@ -271,3 +271,18 @@ print(reverse_letter("krishan"))
 print(reverse_letter("ultr53o?n"))
 print(reverse_letter("ab23c"))
 print(reverse_letter("krish21an"))
+
+
+# Task: Hamming Distance
+def hamming(a, b):
+    count = 0
+
+    for i in range(len(a)):
+        if a[i] != b[i]:
+            count += 1
+
+    return count
+
+
+print(hamming("hello world","hello tokyo"))
+print(hamming("old father, old artificer","of my soul the uncreated "))
