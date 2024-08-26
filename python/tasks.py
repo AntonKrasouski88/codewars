@@ -286,3 +286,26 @@ def hamming(a, b):
 
 print(hamming("hello world","hello tokyo"))
 print(hamming("old father, old artificer","of my soul the uncreated "))
+
+# Task: Weird String Case
+def to_weird_case(words):
+    text_correct = []
+    words_list = words.split()
+
+    for word in words_list:
+        word_correct = ''
+
+        for i in range(len(word)):
+            if i % 2 == 0:
+                word_correct += word[i].upper()
+            else:
+                word_correct += word[i].lower()
+
+        text_correct.append(word_correct)
+
+    return ' '.join(text_correct)
+
+
+print(to_weird_case('This'))
+print(to_weird_case('is'))
+print(to_weird_case('Weird string case'))
