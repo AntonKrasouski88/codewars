@@ -713,3 +713,32 @@ function  uniqueInOrder(iterable) {
 }
 
 console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+
+//Task: Principal Diagonal|VS|Secondary Diagonal
+function diagonal(matrix) {
+    firstArr = [];
+    secondArr = [];
+
+    for(let i = 0; i < matrix.length; i++) {
+        firstArr.push(matrix[i][i])
+        secondArr.push(matrix[i][matrix[i].length - 1 - i])
+    }
+
+    firstArr = firstArr.reduce((acc, el) => acc + el);
+    secondArr = secondArr.reduce((acc, el) => acc + el);
+
+    if(firstArr > secondArr) return "Principal Diagonal win!"
+    if(firstArr < secondArr) return "Secondary Diagonal win!"
+    if(firstArr === secondArr) return "Draw!"
+}
+
+console.log(diagonal([[1, 2, 3],
+                      [4, 5, 6],
+                      [7, 8, 9]]));
+
+console.log(diagonal([ [1, 2, 2, 5, 1],
+    [4, 1, 6, 1, 1],
+    [1, 8, 5, 6 ,2],
+    [1, 5, 2, 1, 2],
+    [1, 8, 2, 6, 1] ]))
