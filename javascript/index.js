@@ -24,9 +24,9 @@ console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']))
 console.log(isValidWalk(['w']))
 
 
-//Task: Subsrting fun
+//Task: Substring fun
 function nthChar(words) {
-    return words.reduce((accum, el, i) => accum + el[i], '');
+    return words.reduce((acc, el, i) => acc + el[i], '');
 }
 
 console.log(nthChar(['yoda', 'best', 'has']));
@@ -62,7 +62,7 @@ console.log(number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]));
 console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]));
 console.log(number([[0,0]]));
 
-//Task: Testeing 1-2-3
+//Task: Testing 1-2-3
 function number (array) {
     return array.length !== 0 ? array.map((el, i) => `${i + 1}: ${el}`) : [];
 }
@@ -71,7 +71,7 @@ console.log(number([]));
 console.log(number(['a', 'b', 'c']));
 
 //Task: Don't give me five
-function dontGiveMeFive (start, end) {
+function donGiveMeFive (start, end) {
     let count = 0;
     for (let i = start; i <= end; i++) {
         `${i}`.indexOf('5') === -1 && count++;
@@ -79,8 +79,8 @@ function dontGiveMeFive (start, end) {
     return count
 }
 
-console.log(dontGiveMeFive(1,73));
-console.log(dontGiveMeFive(4,17));
+console.log(donGiveMeFive(1,73));
+console.log(donGiveMeFive(4,17));
 
 //Task: Count the divisors of a number
 /* function getDivisorsCnt (n) {
@@ -426,8 +426,8 @@ console.log(min([1,2,3,4,5], 'value'));
 console.log(min([1,2,3,4,5], 'index'));
 
 
-//Task: Find the cappitals
-function cappitals(word) {
+//Task: Find the capitals
+function capitals(word) {
     let arr = [];
 
     for(let i = 0; i < word.length; i++) {
@@ -438,7 +438,7 @@ function cappitals(word) {
     return arr
 }
 
-console.log(cappitals('CodEWaRs'));
+console.log(capitals('CodEWaRs'));
 
 
 //Task: Small enough? - Beginner
@@ -500,17 +500,14 @@ function bingo(ticket, win) {
     return num >= win ? 'Winner' : 'Loser';
 }
 
-console.log(bingo([['BHCW',87], ['PILSXIZV',86]], 1));
-console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 2));
-console.log(bingo([['ABC', 65], ['HGR', 74], ['BYHT', 74]], 1));
-console.log(bingo([['FRZ',70], ['HX',69], ['HPAJNE',87], ['UQWHEB',68], ['LUVH',67], ['RU',80], ['XQOEQSKI',83]]));
 
-['BHCW',87]
+console.log(bingo([['ABC', 65], ['HGR', 74], ['BAHT', 74]], 2));
+
 
 //Task: Sort array by string length
 function sortByLength(arr) {
-    const sortLengtWordArray = arr.sort((a, b) => a.length - b.length);
-    return sortLengtWordArray
+    const sortLengthWordArray = arr.sort((a, b) => a.length - b.length);
+    return sortLengthWordArray
 }
 
 console.log(sortByLength(["Beg", "Life", "I", "To"]));
@@ -742,3 +739,13 @@ console.log(diagonal([ [1, 2, 2, 5, 1],
     [1, 8, 5, 6 ,2],
     [1, 5, 2, 1, 2],
     [1, 8, 2, 6, 1] ]))
+
+//Task: Remove the minimum
+function removeSmallest(numbers) {
+    const copyNumbers = [...numbers];
+    delete copyNumbers[numbers.indexOf(Math.min(...numbers))]
+    return copyNumbers.filter(num => num !== undefined)
+}
+
+console.log(removeSmallest([1, 2, 3, 4, 5]));
+console.log(removeSmallest([]));
