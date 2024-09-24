@@ -749,3 +749,25 @@ function removeSmallest(numbers) {
 
 console.log(removeSmallest([1, 2, 3, 4, 5]));
 console.log(removeSmallest([]));
+
+//Task: find the stray number
+function stray(number) {
+    let obj = {};
+    for(let i = 0; i < number.length; i++) {
+        if(obj[number[i]]) {
+           obj[number[i]] = obj[number[i]] + 1 
+        } else {
+            obj[number[i]] = 1
+        }
+    }
+
+    for(let [key, val] of Object.entries(obj)) {
+        console.log(key, val);
+        
+        if(val === 1) {
+            return key
+        }
+    }
+}
+
+console.log(stray([17, 17, 3, 17, 17, 17, 17]));
