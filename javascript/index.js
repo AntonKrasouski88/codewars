@@ -807,3 +807,11 @@ console.log(arithmetic(1, 2, "add"));
 console.log(arithmetic(8, 2, "subtract"));
 console.log(arithmetic(5, 2, "multiply"));
 console.log(arithmetic(8, 2, "divide"));
+
+//Find the middle element
+function gimme(triplet) {
+    return triplet.indexOf([...triplet].sort((a, b) => a - b)[1]);
+}
+
+console.log(gimme([10, 5, 14]));
+console.log(gimme([-2,-3,-1]));
