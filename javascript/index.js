@@ -788,3 +788,22 @@ function calculateYears(principal, interest, tax, desired) {
 
 console.log(calculateYears(1000, 0.05, 0.18, 1100));
 console.log(calculateYears(1000,0.01625,0.18,1200));
+
+//Task: Make a function that does arithmetic
+function arithmetic(a, b, operator) {
+    switch(operator) {
+        case("add"):
+            return a + b;
+        case("subtract"):
+            return a - b;
+        case("multiply"):
+            return a * b;
+        case("divide"):
+            return a / b
+    }
+}
+
+console.log(arithmetic(1, 2, "add"));
+console.log(arithmetic(8, 2, "subtract"));
+console.log(arithmetic(5, 2, "multiply"));
+console.log(arithmetic(8, 2, "divide"));
