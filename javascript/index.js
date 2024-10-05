@@ -815,3 +815,11 @@ function gimme(triplet) {
 
 console.log(gimme([10, 5, 14]));
 console.log(gimme([-2,-3,-1]));
+
+//Summing a number's digits
+function sumDigits(number) {
+    return Math.abs(number).toString().split('').reduce((acc, el) => acc + +el, 0)
+}
+
+console.log(sumDigits(99));
+console.log(sumDigits(-32));
