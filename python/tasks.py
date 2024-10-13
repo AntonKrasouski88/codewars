@@ -309,3 +309,13 @@ def to_weird_case(words):
 print(to_weird_case('This'))
 print(to_weird_case('is'))
 print(to_weird_case('Weird string case'))
+
+
+#Task: Quadrants
+def quadrants(x, y):
+    return 1 + 2*(y<0) + (x*y<0)
+
+print(quadrants(1,2))
+print(quadrants(-10,100))
+print(quadrants(-1,-9))
+print(quadrants(19,-56))
