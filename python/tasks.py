@@ -319,3 +319,22 @@ print(quadrants(1,2))
 print(quadrants(-10,100))
 print(quadrants(-1,-9))
 print(quadrants(19,-56))
+
+
+#Task: Fix string case
+def solve(s):
+    lower = 0
+    upper = 0
+    for chr in s:
+        if chr.islower():
+            lower += 1
+        else:
+            upper += 1
+    
+    if lower >= upper:
+        return s.lower()
+    else:
+        return s.upper()
+
+print(solve("coDe"))
+print(solve("CODe"))
