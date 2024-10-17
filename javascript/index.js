@@ -823,3 +823,16 @@ function sumDigits(number) {
 
 console.log(sumDigits(99));
 console.log(sumDigits(-32));
+
+//Task: Move 10
+function moveTen(s) {
+    encryptedWord = '';
+    for(let i = 0; i < s.length; i++) {
+        num = s.charCodeAt(i) + 10 < 123 ? s.charCodeAt(i) + 10: (s.charCodeAt(i) + 10) - 122 + 96;
+        encryptedWord += String.fromCharCode(num);
+    }
+
+    return encryptedWord;
+}
+
+console.log(moveTen("testcase"));
