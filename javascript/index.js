@@ -836,3 +836,42 @@ function moveTen(s) {
 }
 
 console.log(moveTen("testcase"));
+
+//Find best path
+function findBestPath(grid) {
+    const rows = grid[0].length;
+    const cols = grid.length;
+
+    if(rows < 3 || cols < 3) {
+        return -1
+    }
+
+    const arr = Array.from({length: cols}, () => Array(rows).fill(0));
+
+    arr[0][0] = grid[0][0]
+
+    for(let i = 1; i < rows; i++) {
+        arr[0][i] = grid[0][i] + arr[0][i - 1]
+    }
+
+    for(let i = 1; i < cols; i++) {
+        arr[i][0] = grid[i][0] + arr[i - 1][0]
+    }
+
+    for(let i = 1; i < cols; i++) {
+        for(let j = 1; j < rows; j++){
+            const sumX = grid[i][j] + arr[i - 1][j];
+            const sumY = grid[i][j] + arr[i][j - 1];
+            
+
+            arr[i][j] = sumX > sumY ? sumX : sumY
+        }
+    }
+
+    return arr[cols - 1][rows - 1]
+}
+
+
+console.log(findBestPath([[1,3,1],[3,5,5],[3,5,3],[10,10,3],[3,5,3]]));
+
+
