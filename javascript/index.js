@@ -875,3 +875,38 @@ function findBestPath(grid) {
 console.log(findBestPath([[1,3,1],[3,5,5],[3,5,3],[10,10,3],[3,5,3]]));
 
 
+//Task: game map of the island
+function moveOnIsland(grid, startCoords, direction) {
+    switch(direction) {
+        case('north'):
+            if(grid[startCoords[0] - 1][startCoords[1]] === 'land') {
+                startCoords[0] = startCoords[0] - 1;
+                return startCoords
+            }
+            break    
+        case('south'):
+            console.log(startCoords);
+            if(grid[startCoords[0] + 1][startCoords[1]] === 'land') {
+                startCoords[0] = startCoords[0] + 1;
+                return startCoords
+            }
+            break
+        case('east'):
+            if(grid[startCoords[0]][startCoords[1] + 1] === 'land') {
+                startCoords[1] = startCoords[1] + 1;
+                return startCoords
+            }
+            break
+        case('west'):
+            if(grid[startCoords[0]][startCoords[1] - 1] === 'land') {
+                startCoords[1] = startCoords[1] - 1;
+                return startCoords
+            }
+            break
+    }
+    return startCoords 
+}
+
+
+//console.log(moveOnIsland([["water","water","water","water"],["water","land","land","water"],["water","water","land","water"],["water","water","water","water"]], [0,1], 'east'));
+console.log(moveOnIsland([["water","water","water","water"],["water","land","land","water"],["water","water","land","water"],["water","water","water","water"]], [1,1], 'north'));
