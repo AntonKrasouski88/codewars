@@ -338,3 +338,15 @@ def solve(s):
 
 print(solve("coDe"))
 print(solve("CODe"))
+
+
+#Task: Descending Order
+def descending_order(num: int) ->int:
+    #list_num = []
+    #list_num.extend(str(num))
+    #list_num.sort(reverse=True)
+    #numbers = ''.join(list_num)
+    #return int(numbers)
+    return int(''.join(sorted(str(num), reverse=True)))
+    
+print(descending_order(51))
