@@ -910,3 +910,10 @@ function moveOnIsland(grid, startCoords, direction) {
 
 //console.log(moveOnIsland([["water","water","water","water"],["water","land","land","water"],["water","water","land","water"],["water","water","water","water"]], [0,1], 'east'));
 console.log(moveOnIsland([["water","water","water","water"],["water","land","land","water"],["water","water","land","water"],["water","water","water","water"]], [1,1], 'north'));
+
+
+//Task: Chain me
+function chainMe(input, fs) {
+    fs.forEach(f => input = f(input));
+    return input
+}
