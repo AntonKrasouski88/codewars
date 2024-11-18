@@ -917,3 +917,12 @@ function chainMe(input, fs) {
     fs.forEach(f => input = f(input));
     return input
 }
+
+
+//Make Upper Case
+function makeUpperCase(str) {
+    return str.toUpperCase()
+}
+
+console.log(makeUpperCase(""));
+console.log(makeUpperCase("hello world"));
