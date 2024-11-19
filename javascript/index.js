@@ -926,3 +926,9 @@ function makeUpperCase(str) {
 
 console.log(makeUpperCase(""));
 console.log(makeUpperCase("hello world"));
+
+
+//Is he gonna survive
+function hero(bullets, dragons) {
+    return bullets >= dragons * 2
+}
