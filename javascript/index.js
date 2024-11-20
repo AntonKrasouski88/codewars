@@ -924,7 +924,7 @@ function makeUpperCase(str) {
     return str.toUpperCase()
 }
 
-console.log(makeUpperCase(""));
+console.log(makeUpperCase(""));nt 
 console.log(makeUpperCase("hello world"));
 
 
@@ -932,3 +932,18 @@ console.log(makeUpperCase("hello world"));
 function hero(bullets, dragons) {
     return bullets >= dragons * 2
 }
+
+//Count by X
+function countBy(x, n) {
+    let z = [];
+    let y = 1;
+    while(z.length !== n) {
+        if(y % x == 0) {
+            z.push(y);
+        }
+        y++;
+    }
+    return z;
+}
+
+console.log(countBy(1,10));
