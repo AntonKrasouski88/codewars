@@ -947,3 +947,9 @@ function countBy(x, n) {
 }
 
 console.log(countBy(1,10));
+
+
+//Convert a string to an array
+function stringToArray(string) {
+    return string.split(' ')
+}
