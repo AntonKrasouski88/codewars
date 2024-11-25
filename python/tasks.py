@@ -350,3 +350,12 @@ def descending_order(num: int) ->int:
     return int(''.join(sorted(str(num), reverse=True)))
     
 print(descending_order(51))
+
+
+#Rock Paper Scissor
+def rps(p1, p2):
+    moves = ["rock", "scissors", "paper"]
+    outcomes = ["Draw!", "Player 1 won!", "Player 2 won!"] 
+    
+    difference = moves.index(p2) - moves.index(p1)
+    return outcomes[difference]
