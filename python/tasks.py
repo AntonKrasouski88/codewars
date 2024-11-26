@@ -359,3 +359,10 @@ def rps(p1, p2):
     
     difference = moves.index(p2) - moves.index(p1)
     return outcomes[difference]
+
+
+# Name on billboard
+def billboard(name, price=30):
+    return sum(price for _ in name)
+
+print(billboard('Python', 20))
