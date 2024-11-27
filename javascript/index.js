@@ -953,3 +953,9 @@ console.log(countBy(1,10));
 function stringToArray(string) {
     return string.split(' ')
 }
+
+
+//Jenny's secret message
+function greet(name) {
+    return name === "Johnny" ? "Hello, my love!": "Hello, " + name + "!";
+}
