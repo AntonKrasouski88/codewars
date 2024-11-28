@@ -959,3 +959,9 @@ function stringToArray(string) {
 function greet(name) {
     return name === "Johnny" ? "Hello, my love!": "Hello, " + name + "!";
 }
+
+
+//Array plus array
+function arrayPlusArray(arr1, arr2) {
+    return [...arr1,...arr2].reduce((acc, el) => acc + el)
+}
