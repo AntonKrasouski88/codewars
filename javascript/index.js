@@ -965,3 +965,18 @@ function greet(name) {
 function arrayPlusArray(arr1, arr2) {
     return [...arr1,...arr2].reduce((acc, el) => acc + el)
 }
+
+//Count by X
+function countBy(x, n) {
+    const z = [];
+    let i = 0;
+    
+    while(z.length !== n) {
+        i += x;
+        z.push(i);
+    }
+
+    return z;
+}
+
+console.log(countBy(2,5));
