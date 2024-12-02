@@ -980,3 +980,20 @@ function countBy(x, n) {
 }
 
 console.log(countBy(2,5));
+
+
+//Sum without highest and lowest number
+function sumArray(array) {
+    if(array == null || array.length  < 3) {
+        return 0;
+    }
+    array.sort((a,b) => a - b);
+    return array.slice(1,array.length - 1).reduce((acc, el) => acc + el);
+}
+
+console.log(sumArray([ 6, 2, 1, 8, 10 ]));
+console.log(sumArray(null));
+console.log(sumArray([ 6, 2]));
+console.log(sumArray([ 6, 2, 1]));
+console.log(sumArray([]));
+console.log(sumArray([ -6, -20, -1, -10, -12 ]));
