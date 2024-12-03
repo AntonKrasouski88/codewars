@@ -997,3 +997,17 @@ console.log(sumArray([ 6, 2]));
 console.log(sumArray([ 6, 2, 1]));
 console.log(sumArray([]));
 console.log(sumArray([ -6, -20, -1, -10, -12 ]));
+
+
+// Grasshopper - Grade book
+function getGrade(s1, s2, s3) {
+    num = (s1 + s2 + s3) / 3;
+
+    if(num >= 90 && num <= 100) return 'A';
+    else if(num < 90 && num >= 80) return 'B';
+    else if(num < 80 && num >= 70) return 'C';
+    else if(num < 70 && num >= 60) return 'D';
+    else return 'F'
+}
+
+console.log(getGrade(70,70,100));
