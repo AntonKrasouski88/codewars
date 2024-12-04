@@ -1011,3 +1011,12 @@ function getGrade(s1, s2, s3) {
 }
 
 console.log(getGrade(70,70,100));
+
+
+//Area or Perimeter
+function areaOrPerimeter(l,w) {
+    return l == w ? l * w: 2 * (l + w);
+}
+
+console.log(areaOrPerimeter(3,  3));
+console.log(areaOrPerimeter(6, 10));
