@@ -1020,3 +1020,11 @@ function areaOrPerimeter(l,w) {
 
 console.log(areaOrPerimeter(3,  3));
 console.log(areaOrPerimeter(6, 10));
+
+
+//Task: Transportation on vacation
+function rentalCarCost(d) {
+    return d * 40 - (d >= 3 && d < 7 ? 20 : d >= 7 ? 50: 0)
+}
+
+console.log(rentalCarCost(6));
