@@ -1036,3 +1036,12 @@ function greet (name, owner) {
 }
 
 console.log(greet('Greg', 'Daniel'));
+
+//Task: The feast of many beasts
+function feast(beast, dish) {
+    return dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length - 1]);
+}
+
+console.log(feast("great blue heron", "garlic naan"));
+console.log(feast("chickadee", "chocolate cake"));
+console.log(feast("brown bear", "bear claw"));
