@@ -1058,3 +1058,11 @@ function updateLight(current) {
 console.log(updateLight("green"));
 console.log(updateLight("yellow"));
 console.log(updateLight("red"));
+
+
+//Count the monkeys!
+function monkeyCount(n) {
+    return Array.from({length: n}, (_, i) => i + 1);
+}
+
+console.log(monkeyCount(5));
