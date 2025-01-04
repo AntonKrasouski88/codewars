@@ -15,10 +15,10 @@ print(square_digits(0))
 
 #Task: If you can't sleep, just count sheep!!
 def count_sheep(n):
-    str =''
+    string =''
     for i in range(1, n + 1):
-        str += f'{i} sheep...'
-    return str
+        string += f'{i} sheep...'
+    return string
 
 print(count_sheep(3))
 print(count_sheep(0))
@@ -30,17 +30,17 @@ print(count_sheep(0))
 
 #Task: CSV representation of array
 def to_csv_text(array):
-    str = ''
+    string = ''
 
     for arr in array:
         for i in range(0, len(arr)):
             if i == len(arr) - 1:
-                str += f'{(arr[i])}'
-                str += '\n'
+                string += f'{(arr[i])}'
+                string += '\n'
             else:
-                str += f'{(arr[i])},'
+                string += f'{(arr[i])},'
 
-    return str[:-1]
+    return string[:-1]
 
 #def to_csv_text(array):
 #    return '\n'.join(','.join(map(str,line)) for line in array)
@@ -105,12 +105,12 @@ print(disemvowel("This website is for losers LOL!"))
 
 # Task: Find the divisors! 
 def divisors(n):
-    divisors = [i for i in range(2, int(n/2) + 1) if n%i == 0]
+    divisor = [i for i in range(2, int(n/2) + 1) if n%i == 0]
     
-    if len(divisors) == 0:
+    if len(divisor) == 0:
         return f"{n} is prime"
     
-    return divisors
+    return divisor
 
 print(divisors(15))
 print(divisors(253))
@@ -325,8 +325,8 @@ print(quadrants(19,-56))
 def solve(s):
     lower = 0
     upper = 0
-    for chr in s:
-        if chr.islower():
+    for char in s:
+        if char.islower():
             lower += 1
         else:
             upper += 1
@@ -366,3 +366,17 @@ def billboard(name, price=30):
     return sum(price for _ in name)
 
 print(billboard('Python', 20))
+
+
+# Surface Area and Volume Box
+def get_size(w,h,d):
+    area = 2 * (w * h + w * d + h * d)
+    volume = w * d * h
+    return [area, volume]
+
+print(get_size(4, 2, 6))
+
+
+
+
+
