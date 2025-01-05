@@ -377,6 +377,8 @@ def get_size(w,h,d):
 print(get_size(4, 2, 6))
 
 
-
+#Formatting decimal places
+def two_decimal_places(n):
+    return round(n, 2)
 
 
