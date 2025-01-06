@@ -381,4 +381,19 @@ print(get_size(4, 2, 6))
 def two_decimal_places(n):
     return round(n, 2)
 
+print(two_decimal_places(12.23423543543))
 
+
+#Find count of Most Frequent Item in an Array
+def most_frequent_item_current(collection):
+    # count = 0
+    #
+    # for num in collection:
+    #     n = collection.count(num)
+    #     if n > count:
+    #         count = n
+    #
+    # return count
+    return max([collection.count(item) for item in collection])
+
+print(most_frequent_item_current([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]))
