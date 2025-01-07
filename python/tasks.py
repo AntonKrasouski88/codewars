@@ -397,3 +397,12 @@ def most_frequent_item_current(collection):
     return max([collection.count(item) for item in collection])
 
 print(most_frequent_item_current([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]))
+
+
+# Formatting decimal places#1
+def two_decimal_places(number):
+    return int(number * 100) / 100
+
+print(two_decimal_places(10.1289767789))
+print(two_decimal_places(-7488.83485834983))
+print(two_decimal_places(4.653725356))
