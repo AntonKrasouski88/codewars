@@ -406,3 +406,9 @@ def two_decimal_places(number):
 print(two_decimal_places(10.1289767789))
 print(two_decimal_places(-7488.83485834983))
 print(two_decimal_places(4.653725356))
+
+# Stringy Strings
+def stringy(size):
+    return ('10' * size)[:size]
+
+print(stringy(6))
