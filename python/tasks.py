@@ -412,3 +412,8 @@ def stringy(size):
     return ('10' * size)[:size]
 
 print(stringy(6))
+
+
+# Grasshopper - Combine strings
+def combine_names(first_name, last_name):
+    return f"{first_name} {last_name}"
