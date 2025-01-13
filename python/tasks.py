@@ -417,3 +417,22 @@ print(stringy(6))
 # Grasshopper - Combine strings
 def combine_names(first_name, last_name):
     return f"{first_name} {last_name}"
+
+
+# Comfortable words
+def comfortable_word(word):
+    left_keys = ['q', 'w', 'e', 'r', 't', 'a', 's', 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b']
+    right_keys = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+    l = True if word[0] in left_keys else False
+
+    for char in word[1:]:
+        if char in left_keys and l:
+            return False
+        if char in right_keys and not l:
+            return False
+        l = not l
+
+    return True
+
+print(comfortable_word('yams'))
+print(comfortable_word('test'))
