@@ -436,3 +436,19 @@ def comfortable_word(word):
 
 print(comfortable_word('yams'))
 print(comfortable_word('test'))
+
+
+# Find the unique number
+def find_uniq(arr):
+    numbers = {}
+    for el in arr:
+        if el in numbers:
+            numbers[el] += 1
+        else:
+            numbers[el] = 1
+
+    for key, value in numbers.items():
+        if value == 1:
+            return key
+
+print(find_uniq([ 1, 1, 1, 2, 1, 1 ]))
