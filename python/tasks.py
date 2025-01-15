@@ -452,3 +452,30 @@ def find_uniq(arr):
             return key
 
 print(find_uniq([ 1, 1, 1, 2, 1, 1 ]))
+
+
+# Highest Scoring Word
+def high(x):
+    # letters = 'abcdefghijklmnopqrstuvwxyz'
+    # words = x.split()
+    # counter = {}
+    # max_word = ['', 0]
+    #
+    # for word in words:
+    #     counter[word] = 0
+    #     for char in word:
+    #         counter[word] += letters.find(char) + 1
+    #     if max_word[1] < counter[word]:
+    #         max_word[0] = word
+    #         max_word[1] = counter[word]
+    #
+    # return max_word[0]
+    words=x.split(' ')
+    lists = []
+    for i in words:
+        scores = [sum([ord(char) - 96 for char in i])]
+        lists.append(scores)
+    return words[lists.index(max(lists))]
+
+
+print(high('man i need a taxi up to ubud'))
