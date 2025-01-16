@@ -477,5 +477,25 @@ def high(x):
         lists.append(scores)
     return words[lists.index(max(lists))]
 
-
 print(high('man i need a taxi up to ubud'))
+
+
+# Build Tower
+def tower_builder(n_floors):
+    tower = []
+    star = '*'
+
+    for i in range(n_floors, 0, -1):
+        if n_floors == i:
+            tower.append(star * (2 * i - 1))
+        else:
+            space = ' ' * (n_floors - i)
+            st = star * (2 * i - 1)
+            tower.append(f"{space}{st}{space}")
+
+    tower.reverse()
+    return tower
+
+print(tower_builder(6))
+print(tower_builder(1))
+
