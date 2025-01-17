@@ -499,3 +499,9 @@ def tower_builder(n_floors):
 print(tower_builder(6))
 print(tower_builder(1))
 
+
+# ASCII Total
+def uni_total(s):
+    return sum([ord(char) for char in s])
+
+print(uni_total('aaa'))
