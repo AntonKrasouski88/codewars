@@ -505,3 +505,19 @@ def uni_total(s):
     return sum([ord(char) for char in s])
 
 print(uni_total('aaa'))
+
+
+# Break camelCase
+def solution(s):
+    correct_string = ''
+    for char in s:
+        if char.isupper():
+            correct_string += ' ' + char
+        else:
+            correct_string += char
+
+    return correct_string
+
+print(solution("helloWorld"))
+print(solution("camelCase"))
+print(solution("breakCamelCase"))
