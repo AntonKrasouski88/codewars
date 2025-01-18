@@ -510,6 +510,7 @@ print(uni_total('aaa'))
 # Break camelCase
 def solution(s):
     correct_string = ''
+
     for char in s:
         if char.isupper():
             correct_string += ' ' + char
