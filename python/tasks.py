@@ -1,4 +1,7 @@
 # Task: square avery digit
+from turtledemo.penrose import start
+
+
 def square_digits(num):
     new_num = ''
 
@@ -540,3 +543,27 @@ def sort_array(source_array):
     return source_array
 
 print(sort_array([5, 3, 2, 8, 1, 4]))
+
+
+# Find the missing letter
+def find_missing_letter(chars):
+    # chars_string = ''.join(chars).lower()
+    # alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    # start_index = alphabet.find(chars_string[0])
+    # end_index = alphabet.find(chars_string[len(chars_string) - 1])
+    # string = alphabet[start_index:end_index]
+    # find_char = ''
+    #
+    # for el in string:
+    #     if el in chars_string:
+    #         continue
+    #     else:
+    #         find_char = el
+    #
+    # return find_char.upper() if chars[0].isupper() else find_char
+    for x in range(1, len(chars)):
+        if ord(chars[x]) - ord(chars[x - 1]) != 1:
+            return chr(ord(chars[x]) - 1)
+
+print(find_missing_letter(['a','b','c','d','f']))
+print(find_missing_letter(['O','Q','R','S']))
