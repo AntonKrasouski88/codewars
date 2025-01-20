@@ -567,3 +567,18 @@ def find_missing_letter(chars):
 
 print(find_missing_letter(['a','b','c','d','f']))
 print(find_missing_letter(['O','Q','R','S']))
+
+
+# Random case
+def random_case(x):
+    from random import randint
+    string = ''
+    for char in x:
+        num = randint(0, 1)
+        if num == 1:
+            string += char.upper()
+        else:
+            string += char.lower()
+    return string
+
+print(random_case('Lorem ipsum dolor sit amet, consectetur adipiscing elit'))
