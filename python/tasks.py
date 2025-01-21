@@ -582,3 +582,20 @@ def random_case(x):
     return string
 
 print(random_case('Lorem ipsum dolor sit amet, consectetur adipiscing elit'))
+
+
+# Product of Maximus of Array
+def max_product(lst, n_largest_elements):
+    # num = 1 if len(lst) > 0 else 0
+    # lst.sort()
+    # for el in lst[len(lst) - n_largest_elements:]:
+    #     num *= el
+    # return num
+    from functools import reduce
+    from operator import mul
+    from heapq import nlargest
+    return reduce(mul, nlargest(n_largest_elements, lst))
+
+print(max_product([10,8,7,9], 3))
+print(max_product([0]*10, 5))
+print(max_product([8,6,4,6], 3))
