@@ -599,3 +599,16 @@ def max_product(lst, n_largest_elements):
 print(max_product([10,8,7,9], 3))
 print(max_product([0]*10, 5))
 print(max_product([8,6,4,6], 3))
+
+
+# Strong Number (Special Numbers Series #2)
+def strong_num(number):
+    from math import factorial
+    num_list = [factorial(int(el)) for el in str(number)]
+
+    if sum(num_list) == number:
+        return "STRONG!!!!"
+
+    return "Not Strong !!"
+
+print(strong_num(40585))
