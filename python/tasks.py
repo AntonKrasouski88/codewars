@@ -1,4 +1,5 @@
 # Task: square avery digit
+from curses.ascii import islower
 from turtledemo.penrose import start
 
 
@@ -612,3 +613,19 @@ def strong_num(number):
     return "Not Strong !!"
 
 print(strong_num(40585))
+
+
+# ReOrdering
+def re_ordering(text):
+    # words_list = text.split()
+    # correct_text = []
+    # for word in words_list:
+    #     if word[0].istitle():
+    #         correct_text.insert(0, word)
+    #     else:
+    #         correct_text.append(word)
+    #
+    # return ' '.join(correct_text)
+    return ' '.join(sorted(text.split(), key=str.islower))
+
+print(re_ordering("jojo ddjajdiojdwo ana G nnibiial"))
