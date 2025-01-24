@@ -629,3 +629,17 @@ def re_ordering(text):
     return ' '.join(sorted(text.split(), key=str.islower))
 
 print(re_ordering("jojo ddjajdiojdwo ana G nnibiial"))
+
+
+# Who ate the cookie
+def cookie(x):
+    # name = ''
+    # if type(x) == str:
+    #     name = "Zach"
+    # elif type(x) == int or type(x) == float:
+    #     name = "Monica"
+    # else:
+    #     name = "the dog"
+    #
+    # return f"Who ate the last cookie? It was {name}!"
+    return f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
