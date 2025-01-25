@@ -1,7 +1,4 @@
 # Task: square avery digit
-from curses.ascii import islower
-from turtledemo.penrose import start
-
 
 def square_digits(num):
     new_num = ''
@@ -643,3 +640,10 @@ def cookie(x):
     #
     # return f"Who ate the last cookie? It was {name}!"
     return f'Who ate the last cookie? It was {"Zach" if type(x) is str else "Monica" if type(x) in [int, float] else "the dog"}!'
+
+
+# Remove the time
+def shorten_to_date(long_date):
+    return long_date[0:long_date.find(',')]
+
+print(shorten_to_date("Monday February 2, 8pm"))
