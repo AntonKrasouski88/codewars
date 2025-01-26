@@ -647,3 +647,11 @@ def shorten_to_date(long_date):
     return long_date[0:long_date.find(',')]
 
 print(shorten_to_date("Monday February 2, 8pm"))
+
+
+# Special number (Special number Series #5)
+def special_number(number):
+    return "Special!!" if max(str(number)) <= "5" else "NOT!!"
+
+print(special_number(9))
+print(special_number(1))
