@@ -655,3 +655,10 @@ def special_number(number):
 
 print(special_number(9))
 print(special_number(1))
+
+
+# SpeedCode #2 - Array Madness
+def array_madness(a, b):
+    return sum([el**2 for el in a]) > sum([el**3 for el in b])
+
+print(array_madness([4, 5, 6], [1, 2, 3]))
