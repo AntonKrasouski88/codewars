@@ -1066,3 +1066,18 @@ function monkeyCount(n) {
 }
 
 console.log(monkeyCount(5));
+
+//Array Array Array
+function explode(x) {
+    let [a,b] = x;
+  
+    if(typeof a == "number" && typeof b == "number") return new Array(a+b).fill(x);
+    else if(typeof a == "number") return new Array(a).fill(x);
+    else if(typeof b == "number") return new Array(b).fill(x);
+    
+    return 'Void!';
+}
+
+console.log((explode([9, 3])));
+console.log((explode(['a', 3])));
+console.log((explode(['a', '3'])));
