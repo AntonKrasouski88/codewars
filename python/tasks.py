@@ -681,3 +681,11 @@ print(contamination("abc","z"))
 print(contamination("","z"))
 print(contamination("abc",""))
 print(contamination("//case"," "))
+
+
+# Fix your code before the garden dies
+def rain_amount(mm):
+    if (mm >= 40):
+        return "You need to give your plant " + {mm - 40} + " mm of water"
+    else:
+        return "Your plant has had more than enough water for today!"
