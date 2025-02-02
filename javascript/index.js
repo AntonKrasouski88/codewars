@@ -1081,3 +1081,27 @@ function explode(x) {
 console.log((explode([9, 3])));
 console.log((explode(['a', 3])));
 console.log((explode(['a', '3'])));
+
+
+// RGB to Hex Conversion
+function rgb(r, g, b) {
+    let arr = [r, g, b];
+    for(let i = 0; i < arr.length; i++) {
+        arr[i] > 255 && (arr[i] = 255);
+        arr[i] < 0 && (arr[i] = 0);
+        if(arr[i] !== 0) {
+            let num = arr[i].toString(16).toUpperCase();
+            num.length !== 1 ? arr[i] = num : arr[i] = "0" + num;
+        } else {
+            arr[i] = '00';
+        }
+        
+    }
+
+    return arr.join('')
+}
+
+console.log(rgb(0, 0, 0));
+console.log(rgb(0, 0, -20));
+console.log(rgb(300, 255, 255));
+console.log(rgb(82, 83, 10));
