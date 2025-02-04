@@ -1113,3 +1113,9 @@ function formatMoney(amount) {
 }
 
 console.log(formatMoney(3));
+
+
+//Task: You can't code under Pressure#1
+function doubleInteger(i) {
+    return i * 2
+}
