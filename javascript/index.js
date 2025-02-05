@@ -1119,3 +1119,20 @@ console.log(formatMoney(3));
 function doubleInteger(i) {
     return i * 2
 }
+
+//Task: Tram Capacity
+function tram(stops, descending, onboarding) {
+    let capacity = 0;
+    let passengers = 0;
+    for(let i = 0; i < stops; i++) {
+        passengers -= descending[i];
+        passengers += onboarding[i];
+        if(capacity < passengers) capacity = passengers;
+    }
+
+    return capacity;
+}
+
+console.log(tram(4, [0, 2, 4, 4], [3, 5, 2, 0]));
+console.log(tram(2, [0, 2, 4, 4], [3, 5, 2, 0]));
+console.log(tram(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]));
