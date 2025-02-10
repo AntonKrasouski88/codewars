@@ -1142,3 +1142,17 @@ console.log(tram(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1,
 function contamination(text, char) {
     return char.repeat(text.length)
 }
+
+//Two sum
+function twoSum(numbers, target) {
+    for(let i = 0; i < numbers.length - 1; i++) {
+        for(let j = i + 1; j < numbers.length; j++) {
+            if(numbers[i] + numbers[j] ===  target) return [i , j]
+        }
+    }
+}
+
+
+console.log(twoSum([1, 2, 3], 4));
+console.log(twoSum([-257, 361, 541, 548, 707, 290, -436], -75));
+console.log(twoSum([321, 530, 894, -373, 95, -597, -83, 841, 326, 513, 792, -638, -398, -853, 690, -380, -812, -674, 635, 833, 422, 12, -640, 908, 996, 449, -502, 785, 619, -541, 895, -806], -480));
