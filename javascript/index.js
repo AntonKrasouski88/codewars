@@ -1156,3 +1156,25 @@ function twoSum(numbers, target) {
 console.log(twoSum([1, 2, 3], 4));
 console.log(twoSum([-257, 361, 541, 548, 707, 290, -436], -75));
 console.log(twoSum([321, 530, 894, -373, 95, -597, -83, 841, 326, 513, 792, -638, -398, -853, 690, -380, -812, -674, 635, 833, 422, 12, -640, 908, 996, 449, -502, 785, 619, -541, 895, -806], -480));
+
+
+//Length of missing array
+function getLengthOfMissingArray(arr) {
+    if(arr === null || arr.length === 0) return 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length === 0) {
+            return 0;
+        }
+    }
+    let arrLength = arr.map(el => el.length).sort((a,b) => a - b);
+    for (let i = 0; i < arrLength.length - 1; i++) {
+        if(arrLength[i + 1] - arrLength[i] !== 1) {
+            return arrLength[i] + 1;
+        } 
+    }
+}
+
+//console.log(getLengthOfMissingArray([ [ 1, 2 ], [ 4, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]] ));
+//console.log(getLengthOfMissingArray([ [ 1, 2 ], [ 0, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]] ));
+//console.log(getLengthOfMissingArray([[], [1], [4, 2, 2, 2, 2], [4, 1, 0, 2], [0, 4], [2, 4, 4, 4, 4, 4]] ));
+console.log(getLengthOfMissingArray([[], [4], [2, 3, 2]]));
