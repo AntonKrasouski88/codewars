@@ -1178,3 +1178,20 @@ function getLengthOfMissingArray(arr) {
 //console.log(getLengthOfMissingArray([ [ 1, 2 ], [ 0, 5, 1, 1 ], [ 1 ], [ 5, 6, 7, 8, 9 ]] ));
 //console.log(getLengthOfMissingArray([[], [1], [4, 2, 2, 2, 2], [4, 1, 0, 2], [0, 4], [2, 4, 4, 4, 4, 4]] ));
 console.log(getLengthOfMissingArray([[], [4], [2, 3, 2]]));
+
+
+//Data Reverse
+function dataReverse(data) {
+    const dataList = []
+    for (let i = 0; i < data.length; i = i + 8) {
+        let arr = [];
+        for(let j = 0; j < 8; j++) {
+            arr.push(data[i + j]);
+        }
+        dataList.push(arr);
+    }
+
+    return dataList.reverse().flat();
+}
+
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
