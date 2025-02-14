@@ -689,3 +689,26 @@ def rain_amount(mm):
         return "You need to give your plant " + {mm - 40} + " mm of water"
     else:
         return "Your plant has had more than enough water for today!"
+    
+    
+# Proof Read
+def proofread(st):
+    char_list = [char.lower() for char in st]
+    flag = True
+    
+    for i in range(len(char_list) - 1):
+        if char_list[i] == 'i' and char_list[i + 1] == 'e' and flag:
+            char_list[i], char_list[i + 1] = char_list[i + 1], char_list[i]
+            flag = False
+        else:
+            flag = True
+        
+        if i == 0:
+            char_list[0] = char_list[0].upper()
+        
+        if (char_list[i] == '.' and i != len(char_list) - 1):
+            char_list[i + 2] = char_list[i + 2].upper()
+    
+    return  ''.join(char_list)
+
+print(proofread("SHe wEnt CaNoIenG. Edsfsdfsdf fsf sfd."))
