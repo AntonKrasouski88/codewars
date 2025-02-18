@@ -712,3 +712,13 @@ def proofread(st):
     return  ''.join(char_list)
 
 print(proofread("SHe wEnt CaNoIenG. Edsfsdfsdf fsf sfd."))
+
+
+# Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+def replace_exclamation(st):
+    return ''.join('!' if c in 'aeiouAEIOU' else c for c in st)
+
+print(replace_exclamation("ABCDE"))
+
+
+
