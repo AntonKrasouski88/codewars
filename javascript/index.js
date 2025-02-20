@@ -448,7 +448,7 @@ console.log(args_count("a", "b"));
 
 //Task: Build a square
 const generateShape = (integer) => {
-  str = "";
+  let str = "";
   for (let i = 0; i < integer; i++) {
     if (i !== integer - 1) {
       str += `${"*".repeat(integer)}\n`;
@@ -750,8 +750,8 @@ console.log(uniqueInOrder("AAAABBBCCDAABBB"));
 
 //Task: Principal Diagonal|VS|Secondary Diagonal
 function diagonal(matrix) {
-  firstArr = [];
-  secondArr = [];
+  let firstArr = [];
+  let secondArr = [];
 
   for (let i = 0; i < matrix.length; i++) {
     firstArr.push(matrix[i][i]);
@@ -871,9 +871,9 @@ console.log(sumDigits(-32));
 
 //Task: Move 10
 function moveTen(s) {
-  encryptedWord = "";
+  let encryptedWord = "";
   for (let i = 0; i < s.length; i++) {
-    num =
+    let num =
       s.charCodeAt(i) + 10 < 123
         ? s.charCodeAt(i) + 10
         : s.charCodeAt(i) + 10 - 122 + 96;
@@ -1057,7 +1057,7 @@ console.log(sumArray([-6, -20, -1, -10, -12]));
 
 // Grasshopper - Grade book
 function getGrade(s1, s2, s3) {
-  num = (s1 + s2 + s3) / 3;
+  let num = (s1 + s2 + s3) / 3;
 
   if (num >= 90 && num <= 100) return "A";
   else if (num < 90 && num >= 80) return "B";
@@ -1281,3 +1281,12 @@ function rowSumOddNumbers(n) {
 }
 
 console.log(rowSumOddNumbers(2));
+
+//Name array capping
+function capMe(names) {
+  return names.map((name) => {
+    return (name = name[0].toUpperCase() + name.slice(1).toLowerCase());
+  });
+}
+
+console.log(capMe(["jo", "nelson", "jurie"]));
