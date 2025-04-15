@@ -1294,3 +1294,21 @@ console.log(capMe(["jo", "nelson", "jurie"]));
 //USD=>CNY
 const usdcny = (usd) => `${(usd * 6.75).toFixed(2)} Chinese Yuan`;
 console.log(usdcny(6840));
+
+//Reverse integer
+const reverseInt = (num) => {
+  let numString = String(num);
+  let reverseNumber = "";
+
+  for (let i = numString.length - 1; i >= 0; i -= 1) {
+    if (numString[i] === "-") {
+      reverseNumber = "-" + reverseNumber;
+    } else {
+      reverseNumber = reverseNumber + numString[i];
+    }
+  }
+
+  return parseInt(reverseNumber);
+};
+
+console.log(reverseInt(-321));
