@@ -1312,3 +1312,36 @@ const reverseInt = (num) => {
 };
 
 console.log(reverseInt(-321));
+
+// Bracket structure balanced
+const openingSymbols = ["(", "[", "{", "<"];
+const closingSymbols = [")", "]", "}", ">"];
+const isBracketStructureBalanced = (brackets) => {
+  const stack = [];
+
+  for (const bracket of brackets) {
+    if (openingSymbols.includes(bracket)) {
+      stack.push(bracket);
+    }
+    if (closingSymbols.includes(bracket)) {
+      if (stack.length === 0) {
+        return false;
+      }
+      if (
+        openingSymbols.indexOf(stack.at(-1)) !== closingSymbols.indexOf(bracket)
+      ) {
+        return false;
+      }
+      stack.pop();
+    }
+  }
+
+  return stack.length === 0;
+};
+
+console.log(isBracketStructureBalanced("(>")); // false
+console.log(isBracketStructureBalanced("()")); // true
+console.log(isBracketStructureBalanced("[()]")); // true
+console.log(isBracketStructureBalanced("({}[])")); // true
+console.log(isBracketStructureBalanced("{<>}}")); // false
+console.log(isBracketStructureBalanced("([)]")); // false
