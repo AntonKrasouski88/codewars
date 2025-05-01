@@ -6,7 +6,7 @@ def square_digits(num):
     for c in str(num):
         print(c)
         new_num += f'{int(c) ** 2}'
-    
+
     return new_num
 
 
@@ -57,7 +57,7 @@ print(to_csv_text([
 
 #Task: Powers of 2
 def powers_of_two(n):
-# Это называется «сдвиг влево», это разновидность побитового оператора сдвига. 
+# Это называется «сдвиг влево», это разновидность побитового оператора сдвига.
 # По сути, он смотрит на двоичное представление числа и перемещает («сдвигает») его на заданное количество мест.
 # В этом примере двоичное представление сдвигается один раз влево, что удваивает число.
     return [1 << i for i in range (n + 1)] #
@@ -95,7 +95,7 @@ print(get_count("bcdfghjklmnpqrstvwxz y"))
 
 # Task: Disemvowel Trolls
 def disemvowel(string_):
-    
+
     for char in 'aeiouAEIOU':
         string_ = string_.replace(char, '')
 
@@ -104,13 +104,13 @@ def disemvowel(string_):
 print(disemvowel("This website is for losers LOL!"))
 
 
-# Task: Find the divisors! 
+# Task: Find the divisors!
 def divisors(n):
     divisor = [i for i in range(2, int(n/2) + 1) if n%i == 0]
-    
+
     if len(divisor) == 0:
         return f"{n} is prime"
-    
+
     return divisor
 
 print(divisors(15))
@@ -122,10 +122,10 @@ print(divisors(13))
 # Task: Remove the minimum
 def remove_smallest(numbers):
     new_numbers = numbers[:]
-    
+
     if new_numbers:
         new_numbers.remove(min(numbers))
-    
+
     return new_numbers
 
 print(remove_smallest([1, 2, 3, 4, 5]))
@@ -145,7 +145,7 @@ print(remove_smallest([1, 2, 3, 1, 1]))
 
 #    for key, value in numbers.items():
 #        if value == 1:
-#            return key 
+#            return key
 def stray(arr):
     for n in arr:
         if arr.count(n) == 1:
@@ -177,7 +177,7 @@ def unique_in_order(sequence):
     for i in range(len(sequence)):
         if char != sequence[i]:
             char = sequence[i]
-            chars.append(char)    
+            chars.append(char)
 
     return chars
 
@@ -188,10 +188,10 @@ print(unique_in_order(''))
 def nb_dig(n, d):
     numbers = [i**2 for i in range(n + 1)]
     count = 0
-    
+
     for number in numbers:
         count += str(number).count(str(d))
-    
+
     return count
 
 print(nb_dig(10, 1))
@@ -201,12 +201,12 @@ print(nb_dig(5750, 0))
 # Round up to the next multiple of 5
 def round_to_next(n):
 #    if n == 0:
-#        return n    
+#        return n
 #    for i in range(n, n + 6):
 #        if i % 5 == 0:
 #            return i
-    return n + (5 - n) % 5 
-        
+    return n + (5 - n) % 5
+
 print(round_to_next(0))
 print(round_to_next(3))
 print(round_to_next(5))
@@ -241,18 +241,18 @@ def arithmetic(a, b, operator):
         return a * b
     elif operator == 'divide':
         return a / b
-    
+
 
 print(arithmetic(1, 2, "add"))
 
 
 # Task: Sort numbers
-def solution(nums):
+def solutions(nums):
     return sorted(nums) if nums else []
 
 
-print(solution([1,2,3,10,5]))
-print(solution(None))
+print(solutions([1,2,3,10,5]))
+print(solutions(None))
 
 
 # Task: Double Every Other
@@ -331,7 +331,7 @@ def solve(s):
             lower += 1
         else:
             upper += 1
-    
+
     if lower >= upper:
         return s.lower()
     else:
@@ -349,15 +349,15 @@ def descending_order(num: int) ->int:
     #numbers = ''.join(list_num)
     #return int(numbers)
     return int(''.join(sorted(str(num), reverse=True)))
-    
+
 print(descending_order(51))
 
 
 #Rock Paper Scissor
 def rps(p1, p2):
     moves = ["rock", "scissors", "paper"]
-    outcomes = ["Draw!", "Player 1 won!", "Player 2 won!"] 
-    
+    outcomes = ["Draw!", "Player 1 won!", "Player 2 won!"]
+
     difference = moves.index(p2) - moves.index(p1)
     return outcomes[difference]
 
@@ -379,10 +379,10 @@ print(get_size(4, 2, 6))
 
 
 #Formatting decimal places
-def two_decimal_places(n):
+def two_decimal_places_2(n):
     return round(n, 2)
 
-print(two_decimal_places(12.23423543543))
+print(two_decimal_places_2(12.23423543543))
 
 
 #Find count of Most Frequent Item in an Array
@@ -686,29 +686,29 @@ print(contamination("//case"," "))
 # Fix your code before the garden dies
 def rain_amount(mm):
     if (mm >= 40):
-        return "You need to give your plant " + {mm - 40} + " mm of water"
+        return f"You need to give your plant {mm - 40} mm of water"
     else:
         return "Your plant has had more than enough water for today!"
-    
-    
+
+
 # Proof Read
 def proofread(st):
     char_list = [char.lower() for char in st]
     flag = True
-    
+
     for i in range(len(char_list) - 1):
         if char_list[i] == 'i' and char_list[i + 1] == 'e' and flag:
             char_list[i], char_list[i + 1] = char_list[i + 1], char_list[i]
             flag = False
         else:
             flag = True
-        
+
         if i == 0:
             char_list[0] = char_list[0].upper()
-        
+
         if (char_list[i] == '.' and i != len(char_list) - 1):
             char_list[i + 2] = char_list[i + 2].upper()
-    
+
     return  ''.join(char_list)
 
 print(proofread("SHe wEnt CaNoIenG. Edsfsdfsdf fsf sfd."))
@@ -720,5 +720,11 @@ def replace_exclamation(st):
 
 print(replace_exclamation("ABCDE"))
 
-
-
+# Task hexlet Ascending sequence
+def is_continuous_sequence(source):
+    if len(source) < 2:
+        return False
+    for x, y in zip(source, source[1:]):
+        if (y - x) != 1:
+            return False
+    return True
