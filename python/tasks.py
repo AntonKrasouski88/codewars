@@ -728,3 +728,14 @@ def is_continuous_sequence(source):
         if (y - x) != 1:
             return False
     return True
+
+
+# Query String
+def build_query_string(query_string):
+    words = []
+    for key, value in query_string.items():
+        words.append(f'{key}={value}')
+
+    return '&'.join(sorted(words))
+
+print(build_query_string({'per': 10, 'page': 1}))
