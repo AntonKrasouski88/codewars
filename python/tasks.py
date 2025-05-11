@@ -739,3 +739,18 @@ def build_query_string(query_string):
     return '&'.join(sorted(words))
 
 print(build_query_string({'per': 10, 'page': 1}))
+
+
+# Scrabble
+from  collections import Counter
+
+def scrabble(sentence, word):
+    counter_chars = Counter(sentence.lower())
+    for letter, count in Counter(word.lower()).items():
+        if counter_chars[letter] < count:
+            return False
+
+    return True
+
+print(scrabble('rkqodlw', 'wworld'))
+print(scrabble('scriptingjava', 'JavaScript'))
