@@ -1372,3 +1372,32 @@ const scrabble = (sentence, word) => {
 };
 
 console.log(scrabble("rkqodlw", "world"));
+
+// Difference calculator
+const genDiff = (firstObj, secondObj) => {
+  const obj = { ...firstObj, ...secondObj };
+  const result = {};
+  for (const [key, value] of Object.entries(obj)) {
+    const hasFirstObject = Object.hasOwn(firstObj, key);
+    const hasSecondObject = Object.hasOwn(secondObj, key);
+    if (hasFirstObject && hasSecondObject) {
+      firstObj[key] === value
+        ? (result[key] = "unchanged")
+        : (result[key] = "changed");
+    }
+    if (hasFirstObject && !hasSecondObject) {
+      result[key] = "deleted";
+    }
+    if (!hasFirstObject && hasSecondObject) {
+      result[key] = "added";
+    }
+  }
+
+  return result;
+};
+console.log(
+  genDiff(
+    { one: "eon", two: "two", four: true },
+    { two: "own", zero: 4, four: true }
+  )
+);
