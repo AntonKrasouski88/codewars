@@ -1345,3 +1345,30 @@ console.log(isBracketStructureBalanced("[()]")); // true
 console.log(isBracketStructureBalanced("({}[])")); // true
 console.log(isBracketStructureBalanced("{<>}}")); // false
 console.log(isBracketStructureBalanced("([)]")); // false
+
+// Scrabble
+const scrabble = (sentence, word) => {
+  const objWorld = {};
+  const objSentence = {};
+  for (const char of word.toLowerCase()) {
+    Object.hasOwn(objWorld, char)
+      ? (objWorld[char] += 1)
+      : (objWorld[char] = 1);
+    if (!sentence.includes(char)) {
+      return false;
+    }
+  }
+  for (const char of sentence.toLowerCase()) {
+    Object.hasOwn(objSentence, char)
+      ? (objSentence[char] += 1)
+      : (objSentence[char] = 1);
+  }
+  for (const [key, value] of Object.entries(objWorld)) {
+    if (objSentence[key] < value) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(scrabble("rkqodlw", "world"));
