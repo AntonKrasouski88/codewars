@@ -763,3 +763,15 @@ def opposite(number):
 print(opposite(0))
 print(opposite(1))
 print(opposite(-3.543))
+
+
+# Century from Year
+def century(year):
+    num = year/100
+    if num == int(num):
+        return int(num)
+    else:
+        return int(num + (1 - (num - int(num))))
+
+print(century(1705))
+print(century(1700))
