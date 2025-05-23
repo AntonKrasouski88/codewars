@@ -754,3 +754,12 @@ def scrabble(sentence, word):
 
 print(scrabble('rkqodlw', 'wworld'))
 print(scrabble('scriptingjava', 'JavaScript'))
+
+
+# Opposite number
+def opposite(number):
+    return number * -1
+
+print(opposite(0))
+print(opposite(1))
+print(opposite(-3.543))
