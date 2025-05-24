@@ -806,3 +806,11 @@ def create_phone_number(n):
 
 
 print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+
+# How many arguments
+def args_count(*args, **kwargs):
+   return len(args) + len(kwargs)
+    
+print(args_count(32, a1=12))
+print(args_count())
