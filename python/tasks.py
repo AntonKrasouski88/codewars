@@ -775,3 +775,10 @@ def century(year):
 
 print(century(1705))
 print(century(1700))
+
+
+# Reversed String
+def solution(string):
+    return string[::-1]
+
+print(solution("world"))
