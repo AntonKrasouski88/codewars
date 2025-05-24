@@ -814,3 +814,12 @@ def args_count(*args, **kwargs):
     
 print(args_count(32, a1=12))
 print(args_count())
+
+
+# Leap Years
+def is_leap_year(year):
+    return year % 4 == 0 and (not year % 100 == 0 or year % 400 == 0)
+
+print(is_leap_year(2020))
+print(is_leap_year(2100))
+print(is_leap_year(2000))
