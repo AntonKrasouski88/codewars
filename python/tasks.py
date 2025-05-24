@@ -823,3 +823,18 @@ def is_leap_year(year):
 print(is_leap_year(2020))
 print(is_leap_year(2100))
 print(is_leap_year(2000))
+
+
+# Growth of a Population
+def nb_year(p0, percent, aug, p):
+    from math import floor
+    years = 0
+    while p0 < p:
+        p0 = p0 + floor(p0 * percent/100) + aug
+        years += 1
+        
+    return years
+
+print(nb_year(1500, 5, 100, 5000))
+print(nb_year(1500000, 2.5, 10000, 2000000))
+print(nb_year(1500000, 0.25, 1000, 2000000))
