@@ -782,3 +782,10 @@ def solution(string):
     return string[::-1]
 
 print(solution("world"))
+
+
+def maskify(cc):
+    return '#' * (len(cc) - 4) + cc[-4:]
+    
+print(maskify('SF$SDfgsd2eA'))
+print(maskify('SF'))
