@@ -838,3 +838,25 @@ def nb_year(p0, percent, aug, p):
 print(nb_year(1500, 5, 100, 5000))
 print(nb_year(1500000, 2.5, 10000, 2000000))
 print(nb_year(1500000, 0.25, 1000, 2000000))
+
+
+# Perfect Number Verifier
+import math
+def is_perfect(n):
+    if n < 2 or n % 2 != 0: 
+        return False
+    
+    divisors_sum = 1  
+    sqrt_n = int(math.sqrt(n))
+    
+    for i in range(2, sqrt_n + 1):
+        if n % i == 0:
+            divisors_sum += i
+            if i != n // i:
+                divisors_sum += n // i
+
+    return divisors_sum == n
+
+print(is_perfect(1))
+print(is_perfect(28))
+print(is_perfect(25))
