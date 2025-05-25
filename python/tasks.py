@@ -860,3 +860,11 @@ def is_perfect(n):
 print(is_perfect(1))
 print(is_perfect(28))
 print(is_perfect(25))
+
+
+# Abbreviate a Two Word Name
+def abbrev_name(name):
+    words = name.split()
+    return f"{words[0][0]}.{words[1][0]}".upper()
+
+print(abbrev_name("Sam Harris"))
