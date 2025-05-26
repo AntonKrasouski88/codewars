@@ -1423,3 +1423,35 @@ console.log(
     [61, 62, 63, 64, 65, 66],
   ])
 );
+
+// Proof read
+function proofread(str) {
+  const sentence = str.toLowerCase().split("");
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] == "i" && sentence[i + 1] == "e") {
+      [sentence[i], sentence[i + 1]] = [sentence[i + 1], sentence[i]];
+      i += 1;
+    }
+  }
+  sentence[0] = sentence[0].toUpperCase();
+  for (let i = 1; i < sentence.length; i++) {
+    if (sentence[i] === "." && i !== sentence.length - 1) {
+      sentence[i + 2] = sentence[i + 2].toUpperCase();
+    }
+  }
+
+  return sentence.join("");
+}
+
+console.log(
+  proofread(
+    "ChzeeiQCkKMgei PUCrjqNieXwoi vugPvpCy ZEciEHkDdmQF. IEAhBEIjFtY e GWjCBGH hcGUJEit. BmDGeIdZ qEiHZieYlUeI GCrRpqjw EZxlkWrieieciE LxVK qEi."
+  )
+);
+console.log(proofread("He haD iEght ShOTs of CAffIEne"));
+console.log(proofread("JFqVaYeHol EAieakielHIeeIxQ TConDt ftJBgwUzJZUE."));
+console.log(
+  proofread(
+    "Vtleis hdwvg xqkayppnvcv gkllrehnyzj nxfcrs eiyevtetreiq yzrweeieipbgus eixzacwmlh. Slefueiopocu."
+  )
+);
