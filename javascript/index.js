@@ -1455,3 +1455,22 @@ console.log(
     "Vtleis hdwvg xqkayppnvcv gkllrehnyzj nxfcrs eiyevtetreiq yzrweeieipbgus eixzacwmlh. Slefueiopocu."
   )
 );
+
+// Valid Parentheses
+function validParentheses(parenStr) {
+  let countBracket = 0;
+  for (const bracket of parenStr) {
+    if (bracket === "(") {
+      countBracket += 1;
+    } else if (bracket === ")" && countBracket != 0) {
+      countBracket -= 1;
+    } else {
+      return false;
+    }
+  }
+  return countBracket === 0;
+}
+
+console.log(validParentheses("()"));
+console.log(validParentheses(")(()))"));
+console.log(validParentheses("(())((()())())"));
