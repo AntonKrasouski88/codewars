@@ -876,3 +876,11 @@ def filter_list(l):
     return numbers
 
 print(filter_list([1, 2, 'a', 'b']))
+
+
+# Shortest Word
+def find_short(s):
+    words = [len(el) for el in s.split()]
+    return min(words)
+
+print(find_short("bitcoin take over the world maybe who knows perhaps"))
