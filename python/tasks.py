@@ -868,3 +868,11 @@ def abbrev_name(name):
     return f"{words[0][0]}.{words[1][0]}".upper()
 
 print(abbrev_name("Sam Harris"))
+
+
+# List Filtring
+def filter_list(l):
+    numbers = [el for el in l if type(el) is not str]
+    return numbers
+
+print(filter_list([1, 2, 'a', 'b']))
