@@ -884,3 +884,11 @@ def find_short(s):
     return min(words)
 
 print(find_short("bitcoin take over the world maybe who knows perhaps"))
+
+
+# Sum of positive
+def positive_sum(arr):
+    return sum([i for i in arr if i > 0])
+
+print(positive_sum([1,2,3,4,5]))
+print(positive_sum([]))
