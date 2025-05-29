@@ -892,3 +892,10 @@ def positive_sum(arr):
 
 print(positive_sum([1,2,3,4,5]))
 print(positive_sum([]))
+
+
+# Build a square
+def generate_shape(n):
+    return '/n'.join('+' * n for _ in range(n))
+
+print(generate_shape(3))
