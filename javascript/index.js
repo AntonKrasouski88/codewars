@@ -1474,3 +1474,20 @@ function validParentheses(parenStr) {
 console.log(validParentheses("()"));
 console.log(validParentheses(")(()))"));
 console.log(validParentheses("(())((()())())"));
+
+// Format words into a sentence
+function formatWords(words) {
+  if (!words) {
+    return "";
+  }
+  const arr = words.filter((el) => (el ? el : ""));
+  const len = arr.length;
+  if (len === 1) {
+    return arr[0];
+  }
+  return len !== 0 ? `${arr.slice(0, -1).join(", ")} and ${arr[len - 1]}` : "";
+}
+
+console.log(formatWords(["one", "two", "three", "four", "", null]));
+console.log(formatWords(["", null]));
+console.log(formatWords(["one"]));
