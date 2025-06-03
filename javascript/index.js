@@ -1491,3 +1491,11 @@ function formatWords(words) {
 console.log(formatWords(["one", "two", "three", "four", "", null]));
 console.log(formatWords(["", null]));
 console.log(formatWords(["one"]));
+
+// Simple Fun#79: Delete a Dig
+function deleteDigit(n) {
+  const arr = String(n).split("");
+  return Math.max(
+    ...arr.map((_, i) => Number(arr.filter((_, j) => j !== i).join("")))
+  );
+}
