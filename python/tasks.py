@@ -899,3 +899,19 @@ def generate_shape(n):
     return '/n'.join('+' * n for _ in range(n))
 
 print(generate_shape(3))
+
+
+# Playing with digits
+def dig_pow(n, p):
+    str_nums = str(n)
+    sum = 0
+    for i in range(len(str_nums)):
+        sum += int(str_nums[i]) ** (p + i)
+    return int(sum / n) if sum % n == 0 else -1
+
+print(dig_pow(89,1))        
+print(dig_pow(92, 1))
+print(dig_pow(46288, 3))
+print(dig_pow(41, 5))
+print(dig_pow(114, 3))
+print(dig_pow(8, 3))
