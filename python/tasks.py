@@ -915,3 +915,10 @@ print(dig_pow(46288, 3))
 print(dig_pow(41, 5))
 print(dig_pow(114, 3))
 print(dig_pow(8, 3))
+
+
+# Smallest value of an array
+def find_smallest(numbers, to_return):
+    return min(numbers) if to_return == 'value' else numbers.index(min(numbers))
+
+print(find_smallest([5,4,3,2,1],"index"))
