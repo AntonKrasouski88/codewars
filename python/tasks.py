@@ -937,3 +937,18 @@ def is_perfect(number:int):
 print(is_perfect(6))
 print(is_perfect(28))
 print(is_perfect(0))
+
+
+# Degrees of three
+def is_power_of_three(number: int):
+    from math import log
+    if not number or number < 3:
+        return False
+    degrees = log(number, 3)
+    return degrees == int(degrees)
+
+print(is_power_of_three(3))
+print(is_power_of_three(2))
+print(is_power_of_three(9))
+print(is_power_of_three(0))
+print(is_power_of_three(1))
