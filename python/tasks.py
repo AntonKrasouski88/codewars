@@ -922,3 +922,18 @@ def find_smallest(numbers, to_return):
     return min(numbers) if to_return == 'value' else numbers.index(min(numbers))
 
 print(find_smallest([5,4,3,2,1],"index"))
+
+
+# Perfect numbers
+def is_perfect(number:int):
+    if number % 2 != 0:
+        return False
+    count = 1
+    for num in range(2, number//2 + 1):
+        if number % num == 0:
+            count += num
+    return count == number
+
+print(is_perfect(6))
+print(is_perfect(28))
+print(is_perfect(0))
