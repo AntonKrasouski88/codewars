@@ -1499,3 +1499,39 @@ function deleteDigit(n) {
     ...arr.map((_, i) => Number(arr.filter((_, j) => j !== i).join("")))
   );
 }
+
+// Rotation of the matrix
+const matrix = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 0, 1, 2],
+];
+
+function rotateLeft(matrix) {
+  const copyMatrix = matrix.map((el) => [...el].reverse());
+  const result = [];
+  for (let i = 0; i < copyMatrix[0].length; i++) {
+    const arr = [];
+    for (let j = 0; j < copyMatrix.length; j++) {
+      arr.push(copyMatrix[j][i]);
+    }
+    result.push(arr);
+  }
+  return result;
+}
+
+function rotateRight(matrix) {
+  const copyMatrix = [...matrix].reverse();
+  const result = [];
+  for (let i = 0; i < copyMatrix[0].length; i++) {
+    const arr = [];
+    for (let j = 0; j < copyMatrix.length; j++) {
+      arr.push(copyMatrix[j][i]);
+    }
+    result.push(arr);
+  }
+  return result;
+}
+
+console.log(rotateLeft(matrix));
+console.log(rotateRight(matrix));
