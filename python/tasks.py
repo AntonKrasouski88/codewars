@@ -970,3 +970,15 @@ def fizz_buzz(begin:int, end:int):
 
 print(fizz_buzz(1, 5))
 print(fizz_buzz(11, 20))
+
+
+# Happy Ticket
+def is_happy_ticket(series):
+    result = [int(num) for num in series]
+    middle = len(result)//2
+    first_part = sum(result[0:middle])
+    second_part = sum(result[middle:])
+    return first_part == second_part
+
+print(is_happy_ticket('123123')) # True
+print(is_happy_ticket('341801')) # False
