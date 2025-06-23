@@ -952,3 +952,21 @@ print(is_power_of_three(2))
 print(is_power_of_three(9))
 print(is_power_of_three(0))
 print(is_power_of_three(1))
+
+
+# Fizz Buzz
+def fizz_buzz(begin:int, end:int):
+    result = ''
+    for num in range(begin, end + 1):
+        if num % 3 == 0 and num % 5 == 0:
+            result += f'FizzBuzz '
+        elif num % 3 == 0:
+            result += f'Fizz '
+        elif num % 5 == 0:
+            result += f'Buzz '
+        else:
+            result += f'{str(num)} '
+    return result.rstrip()
+
+print(fizz_buzz(1, 5))
+print(fizz_buzz(11, 20))
