@@ -1535,3 +1535,11 @@ function rotateRight(matrix) {
 
 console.log(rotateLeft(matrix));
 console.log(rotateRight(matrix));
+
+// Remove anchor from URL
+function removeUrlAnchor(url) {
+  return url.indexOf("#") !== -1 ? url.slice(0, url.indexOf("#")) : url;
+}
+
+console.log(removeUrlAnchor("www.codewars.com#about"));
+console.log(removeUrlAnchor("www.codewars.com?page=1"));
