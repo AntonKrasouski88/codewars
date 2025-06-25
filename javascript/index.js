@@ -1543,3 +1543,10 @@ function removeUrlAnchor(url) {
 
 console.log(removeUrlAnchor("www.codewars.com#about"));
 console.log(removeUrlAnchor("www.codewars.com?page=1"));
+
+// Maximum Multiple
+function maxMultiple(divisor, bound) {
+  return bound - (bound % divisor);
+}
+
+console.log(maxMultiple(2, 7));
