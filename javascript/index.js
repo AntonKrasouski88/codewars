@@ -1550,3 +1550,20 @@ function maxMultiple(divisor, bound) {
 }
 
 console.log(maxMultiple(2, 7));
+
+// Factorial
+function factorial(n) {
+  if (n < 0 || n > 12) {
+    throw new RangeError();
+  }
+  let sum = 1;
+  for (let i = 2; i < n + 1; i++) {
+    sum *= i;
+  }
+  return sum;
+}
+
+console.log(factorial(0));
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(11));
