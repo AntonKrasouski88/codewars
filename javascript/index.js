@@ -1567,3 +1567,13 @@ console.log(factorial(0));
 console.log(factorial(1));
 console.log(factorial(2));
 console.log(factorial(11));
+
+// Hello, Name or World
+function hello(name) {
+  return name
+    ? `Hello, ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+    : "Hello, World!";
+}
+
+console.log(hello("johN"));
+console.log(hello(""));
