@@ -1577,3 +1577,18 @@ function hello(name) {
 
 console.log(hello("johN"));
 console.log(hello(""));
+
+// GetTopHashtags
+function getTopHashtags(str) {
+  let strFilter = str
+    .match(/[а-яА-Яa-zA-Z]+/g)
+    .filter((el) => el.length >= 5)
+    .map((el) => "#" + el.toLowerCase());
+  return strFilter.slice(0, 5).join(" ");
+}
+
+console.log(
+  getTopHashtags(
+    "Игра престолов - сериал, основанный на романах Джорджа Мартина, рассказывающий о борьбе за власть в вымышленном мире Вестероса"
+  )
+);
