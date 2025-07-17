@@ -1603,3 +1603,13 @@ console.log(isDigit(" "));
 console.log(isDigit("a"));
 console.log(isDigit("a5"));
 console.log(isDigit("14"));
+
+function stringClean(s) {
+  return s.replace(/\d/g, "");
+}
+
+console.log(stringClean(""));
+console.log(stringClean("! !"));
+console.log(stringClean("123456789"));
+console.log(stringClean("(E3at m2e2!!)"));
+console.log(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!"));
