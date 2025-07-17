@@ -1593,6 +1593,7 @@ console.log(
   )
 );
 
+//Regexp Basic - is it a digit
 function isDigit(str) {
   return /^\d$/.test(str);
 }
@@ -1604,6 +1605,7 @@ console.log(isDigit("a"));
 console.log(isDigit("a5"));
 console.log(isDigit("14"));
 
+//String cleaning
 function stringClean(s) {
   return s.replace(/\d/g, "");
 }
@@ -1613,3 +1615,12 @@ console.log(stringClean("! !"));
 console.log(stringClean("123456789"));
 console.log(stringClean("(E3at m2e2!!)"));
 console.log(stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!"));
+
+//Validate code with simple regex
+function validateCode(code) {
+  return /^[1-3]/.test(code);
+}
+
+console.log(validateCode(123));
+console.log(validateCode(8));
+console.log(validateCode(248));
