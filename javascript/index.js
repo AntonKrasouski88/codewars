@@ -1592,3 +1592,14 @@ console.log(
     "Игра престолов - сериал, основанный на романах Джорджа Мартина, рассказывающий о борьбе за власть в вымышленном мире Вестероса"
   )
 );
+
+function isDigit(str) {
+  return /^\d$/.test(str);
+}
+
+console.log(isDigit(""));
+console.log(isDigit("7"));
+console.log(isDigit(" "));
+console.log(isDigit("a"));
+console.log(isDigit("a5"));
+console.log(isDigit("14"));
