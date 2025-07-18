@@ -1651,3 +1651,10 @@ function lowercaseCount(str) {
 }
 console.log(lowercaseCount("abcABC123"));
 console.log(lowercaseCount(""));
+
+//FIXM: replace all dots
+function replaceDots(str) {
+  return str.replace(/\./g, "-");
+}
+
+console.log(replaceDots("one.two.three"));
