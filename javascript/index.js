@@ -1624,3 +1624,30 @@ function validateCode(code) {
 console.log(validateCode(123));
 console.log(validateCode(8));
 console.log(validateCode(248));
+
+//A strange to the Market
+function isLochNessMonser(s) {
+  return /tree fiddy|3\.50/.test(s);
+}
+
+console.log(
+  isLochNessMonser(
+    "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
+  )
+);
+console.log(
+  isLochNessMonser(
+    "I'm from Scottland. I moved here to be with my family sir. Please, $3.50 would go a long way to help me find them"
+  )
+);
+console.log(
+  isLochNessMonser("Hello, I come from the year 3150 to bring you good news!")
+);
+
+//Regex count lowercase letters
+function lowercaseCount(str) {
+  const count = str.match(/[a-z]/g);
+  return count ? count.length : 0;
+}
+console.log(lowercaseCount("abcABC123"));
+console.log(lowercaseCount(""));
