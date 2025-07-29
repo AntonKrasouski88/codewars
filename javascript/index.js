@@ -1658,3 +1658,38 @@ function replaceDots(str) {
 }
 
 console.log(replaceDots("one.two.three"));
+
+// Say prime or not
+const getNumberOfDivisors = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
+  let count = 1;
+
+  for (let i = 1; i < Math.ceil(num); i += 1) {
+    if (num % i === 0) {
+      count += 1;
+    }
+  }
+
+  return count === 2;
+};
+
+function sayPrimeOrNot(num) {
+  const divisors = getNumberOfDivisors(num);
+
+  if (divisors) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+}
+
+sayPrimeOrNot(2);
+sayPrimeOrNot(3);
+sayPrimeOrNot(4);
+sayPrimeOrNot(5);
+sayPrimeOrNot(0);
+sayPrimeOrNot(-3);
+sayPrimeOrNot(49);
