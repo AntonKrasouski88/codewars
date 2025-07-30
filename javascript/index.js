@@ -1693,3 +1693,14 @@ sayPrimeOrNot(5);
 sayPrimeOrNot(0);
 sayPrimeOrNot(-3);
 sayPrimeOrNot(49);
+
+// Take last
+function takeLast(str, n) {
+  return n <= str.length && str
+    ? str.slice(-n).split("").reverse().join("")
+    : null;
+}
+
+console.log(takeLast("", 8));
+console.log(takeLast("cb", 8));
+console.log(takeLast("power", 4));
