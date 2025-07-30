@@ -1704,3 +1704,30 @@ function takeLast(str, n) {
 console.log(takeLast("", 8));
 console.log(takeLast("cb", 8));
 console.log(takeLast("power", 4));
+
+// Take oldest
+function takeOldest(users, n = 1) {
+  let arrUsers = users.map((user) => ({
+    ...user,
+  }));
+
+  arrUsers.sort((user1, user2) => {
+    if (Date.parse(user1.birthday) === Date.parse(user2.birthday)) {
+      return 0;
+    }
+    return Date.parse(user1.birthday) > Date.parse(user2.birthday) ? 1 : -1;
+  });
+
+  return arrUsers.slice(0, n);
+}
+
+const users = [
+  { name: "Tirion", birthday: "Nov 19, 1988" },
+  { name: "Sam", birthday: "Nov 22, 1999" },
+  { name: "Rob", birthday: "Jan 11, 1975" },
+  { name: "Sansa", birthday: "Mar 20, 2001" },
+  { name: "Tisha", birthday: "Feb 27, 1992" },
+  { name: "Chris", birthday: "Dec 25, 1995" },
+];
+
+console.log(takeOldest(users));
