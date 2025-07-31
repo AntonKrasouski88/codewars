@@ -1731,3 +1731,24 @@ const users = [
 ];
 
 console.log(takeOldest(users));
+
+// Group by
+const groupBy = (data, value) => {
+  const result = data.reduce((acc, el) => {
+    if (!Object.hasOwn(acc, el[value])) {
+      acc[el[value]] = [];
+    }
+    acc[el[value]].push(el);
+    return acc;
+  }, {});
+
+  return result;
+};
+
+const students = [
+  { name: "Tirion", class: "B", mark: 3 },
+  { name: "Keit", class: "A", mark: 3 },
+  { name: "Ramsey", class: "A", mark: 4 },
+];
+
+console.log(groupBy(students, "mark"));
