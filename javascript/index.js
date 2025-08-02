@@ -1752,3 +1752,37 @@ const students = [
 ];
 
 console.log(groupBy(students, "mark"));
+
+// Free domains count
+const getFreeDomainsCount = (emails) => {
+  const domains = emails.reduce((acc, email) => {
+    const index = email.indexOf("@");
+    const domain = email.slice(index + 1);
+    if (!freeEmailDomains.includes(domain)) {
+      return acc;
+    }
+    if (!Object.hasOwn(acc, domain)) {
+      acc[domain] = 0;
+    }
+    acc[domain] += 1;
+    return acc;
+  }, {});
+
+  return domains;
+};
+
+const freeEmailDomains = ["gmail.com", "yandex.ru", "hotmail.com", "yahoo.com"];
+
+const emails = [
+  "info@gmail.com",
+  "info@yandex.ru",
+  "info@hotmail.com",
+  "mk@host.com",
+  "support@hexlet.io",
+  "key@yandex.ru",
+  "sergey@gmail.com",
+  "vovan@gmail.com",
+  "vovan@hotmail.com",
+];
+
+console.log(getFreeDomainsCount(emails));
