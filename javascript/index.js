@@ -1786,3 +1786,20 @@ const emails = [
 ];
 
 console.log(getFreeDomainsCount(emails));
+
+//Sequence sum
+const sequenceSum = (begin, end) => {
+  if (begin > end) {
+    return NaN;
+  }
+  if (end === begin) {
+    return begin;
+  } else {
+    return begin + sequenceSum(begin + 1, end);
+  }
+};
+
+console.log(sequenceSum(7, 2));
+console.log(sequenceSum(0, 0));
+console.log(sequenceSum(4, 10));
+console.log(sequenceSum(-3, 2));
