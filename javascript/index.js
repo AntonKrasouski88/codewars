@@ -1824,3 +1824,22 @@ const smallestDivisors = (num) => {
 
 console.log(smallestDivisors(15));
 console.log(smallestDivisors(3));
+
+// Figure number - pronic number
+function isPronic(n) {
+  if (!n) {
+    return true;
+  }
+  for (let i = 0; i < Math.sqrt(n); i += 1) {
+    if (i * (i + 1) === n) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(isPronic(0));
+console.log(isPronic(1));
+console.log(isPronic(2));
+console.log(isPronic(3));
+console.log(isPronic(6));
