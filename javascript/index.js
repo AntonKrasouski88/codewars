@@ -1843,3 +1843,18 @@ console.log(isPronic(1));
 console.log(isPronic(2));
 console.log(isPronic(3));
 console.log(isPronic(6));
+
+//Flatten
+const flatten = (arr) => arr.flat();
+
+console.log(flatten([]));
+console.log(flatten([1, 2, 3]));
+console.log(
+  flatten([
+    [1, 2, 3],
+    ["a", "b", "c"],
+    [1, 2, 3],
+  ])
+); // => [1,2,3,"a","b","c",1,2,3]
+console.log(flatten([[[1, 2, 3]]])); // => [[1,2,3]]
+console.log(flatten([1, 2, 3])); // => [1,2,3]
