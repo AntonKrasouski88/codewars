@@ -1,5 +1,9 @@
 # Task: square avery digit
 
+import math
+from collections import Counter
+
+
 def square_digits(num):
     new_num = ''
 
@@ -14,22 +18,22 @@ print(square_digits(9119))
 print(square_digits(0))
 
 
-#Task: If you can't sleep, just count sheep!!
+# Task: If you can't sleep, just count sheep!!
 def count_sheep(n):
-    string =''
+    string = ''
     for i in range(1, n + 1):
         string += f'{i} sheep...'
     return string
 
+
 print(count_sheep(3))
 print(count_sheep(0))
 
-#def count_sheep(n):
-    #return ''.join(f"{i} sheep..." for i in range(1,n+1))
+# def count_sheep(n):
+# return ''.join(f"{i} sheep..." for i in range(1,n+1))
 
 
-
-#Task: CSV representation of array
+# Task: CSV representation of array
 def to_csv_text(array):
     string = ''
 
@@ -43,31 +47,32 @@ def to_csv_text(array):
 
     return string[:-1]
 
-#def to_csv_text(array):
+# def to_csv_text(array):
 #    return '\n'.join(','.join(map(str,line)) for line in array)
 
 
 print(to_csv_text([
-            [0, 1, 2, 3, 45],
-            [10, 11, 12, 13, 14],
-            [20, 21, 22, 23, 24],
-            [30, 31, 32, 33, 34]
-        ]))
+    [0, 1, 2, 3, 45],
+    [10, 11, 12, 13, 14],
+    [20, 21, 22, 23, 24],
+    [30, 31, 32, 33, 34]
+]))
 
 
-#Task: Powers of 2
+# Task: Powers of 2
 def powers_of_two(n):
-# Это называется «сдвиг влево», это разновидность побитового оператора сдвига.
-# По сути, он смотрит на двоичное представление числа и перемещает («сдвигает») его на заданное количество мест.
-# В этом примере двоичное представление сдвигается один раз влево, что удваивает число.
-    return [1 << i for i in range (n + 1)] #
+    # Это называется «сдвиг влево», это разновидность побитового оператора сдвига.
+    # По сути, он смотрит на двоичное представление числа и перемещает («сдвигает») его на заданное количество мест.
+    # В этом примере двоичное представление сдвигается один раз влево, что удваивает число.
+    return [1 << i for i in range(n + 1)]
+
 
 print(powers_of_two(0))
 print(powers_of_two(1))
 print(powers_of_two(4))
 
 
-#Task: DNA to RNA Conversion
+# Task: DNA to RNA Conversion
 def dna_to_rna(dna):
     return dna.replace('T', 'U')
 
@@ -89,6 +94,7 @@ def get_count(sentence):
     return count
 # return sum(c in 'aeiou' for c in s)
 
+
 print(get_count("aeiou"))
 print(get_count("bcdfghjklmnpqrstvwxz y"))
 
@@ -101,17 +107,19 @@ def disemvowel(string_):
 
     return string_
 
+
 print(disemvowel("This website is for losers LOL!"))
 
 
 # Task: Find the divisors!
 def divisors(n):
-    divisor = [i for i in range(2, int(n/2) + 1) if n%i == 0]
+    divisor = [i for i in range(2, int(n/2) + 1) if n % i == 0]
 
     if len(divisor) == 0:
         return f"{n} is prime"
 
     return divisor
+
 
 print(divisors(15))
 print(divisors(253))
@@ -120,6 +128,8 @@ print(divisors(3))
 print(divisors(13))
 
 # Task: Remove the minimum
+
+
 def remove_smallest(numbers):
     new_numbers = numbers[:]
 
@@ -128,13 +138,14 @@ def remove_smallest(numbers):
 
     return new_numbers
 
+
 print(remove_smallest([1, 2, 3, 4, 5]))
 print(remove_smallest([]))
 print(remove_smallest([1, 2, 3, 1, 1]))
 
 
 # Task: Find the stay number
-#def stray(arr):
+# def stray(arr):
 #    numbers = {}
 
 #    for n in arr:
@@ -151,9 +162,12 @@ def stray(arr):
         if arr.count(n) == 1:
             return n
 
+
 print(stray([1, 1, 1, 1, 1, 2]))
 
 # Task: Money, money, money
+
+
 def calculate_years(principal, interest, tax, desired):
     year = 0
 
@@ -166,8 +180,8 @@ def calculate_years(principal, interest, tax, desired):
 
 
 print(calculate_years(1000, 0.05, 0.18, 1100))
-print(calculate_years(1000,0.01625,0.18,1200))
-print(calculate_years(1000,0.05,0.18,1000))
+print(calculate_years(1000, 0.01625, 0.18, 1200))
+print(calculate_years(1000, 0.05, 0.18, 1000))
 
 
 # Task: Unique in order
@@ -180,6 +194,7 @@ def unique_in_order(sequence):
             chars.append(char)
 
     return chars
+
 
 print(unique_in_order(''))
 
@@ -194,18 +209,20 @@ def nb_dig(n, d):
 
     return count
 
+
 print(nb_dig(10, 1))
 print(nb_dig(5750, 0))
 
 
 # Round up to the next multiple of 5
 def round_to_next(n):
-#    if n == 0:
-#        return n
-#    for i in range(n, n + 6):
-#        if i % 5 == 0:
-#            return i
+    #    if n == 0:
+    #        return n
+    #    for i in range(n, n + 6):
+    #        if i % 5 == 0:
+    #            return i
     return n + (5 - n) % 5
+
 
 print(round_to_next(0))
 print(round_to_next(3))
@@ -218,6 +235,7 @@ print(round_to_next(-5))
 def sequence_sum(begin_number, end_number, step):
     return sum([i for i in range(begin_number, end_number + 1, step)])
 
+
 print(sequence_sum(1, 5, 1))
 print(sequence_sum(2, 2, 2))
 print(sequence_sum(16, 15, 3))
@@ -228,7 +246,7 @@ def gimme(array):
     return array.index(sorted(array)[1])
 
 
-print(gimme([2,3,1]))
+print(gimme([2, 3, 1]))
 
 
 # Task: Make a function that does arithmetic
@@ -251,7 +269,7 @@ def solutions(nums):
     return sorted(nums) if nums else []
 
 
-print(solutions([1,2,3,10,5]))
+print(solutions([1, 2, 3, 10, 5]))
 print(solutions(None))
 
 
@@ -260,13 +278,14 @@ def double_every_other(lst):
     return [val * 2 if i % 2 else val for i, val in enumerate(lst)]
 
 
-print(double_every_other([1,2,3,4,5]))
+print(double_every_other([1, 2, 3, 4, 5]))
 
 
-#Task: SimpleFun#176: Reverse Letter
+# Task: SimpleFun#176: Reverse Letter
 def reverse_letter(st):
     reverse_letters = [char for char in st[::-1] if char.isalpha()]
     return ''.join(reverse_letters)
+
 
 print(reverse_letter("krishan"))
 print(reverse_letter("ultr53o?n"))
@@ -285,10 +304,12 @@ def hamming(a, b):
     return count
 
 
-print(hamming("hello world","hello tokyo"))
-print(hamming("old father, old artificer","of my soul the uncreated "))
+print(hamming("hello world", "hello tokyo"))
+print(hamming("old father, old artificer", "of my soul the uncreated "))
 
 # Task: Weird String Case
+
+
 def to_weird_case(words):
     text_correct = []
     words_list = words.split()
@@ -312,17 +333,18 @@ print(to_weird_case('is'))
 print(to_weird_case('Weird string case'))
 
 
-#Task: Quadrants
+# Task: Quadrants
 def quadrants(x, y):
-    return 1 + 2*(y<0) + (x*y<0)
-
-print(quadrants(1,2))
-print(quadrants(-10,100))
-print(quadrants(-1,-9))
-print(quadrants(19,-56))
+    return 1 + 2*(y < 0) + (x*y < 0)
 
 
-#Task: Fix string case
+print(quadrants(1, 2))
+print(quadrants(-10, 100))
+print(quadrants(-1, -9))
+print(quadrants(19, -56))
+
+
+# Task: Fix string case
 def solve(s):
     lower = 0
     upper = 0
@@ -337,23 +359,25 @@ def solve(s):
     else:
         return s.upper()
 
+
 print(solve("coDe"))
 print(solve("CODe"))
 
 
-#Task: Descending Order
-def descending_order(num: int) ->int:
-    #list_num = []
-    #list_num.extend(str(num))
-    #list_num.sort(reverse=True)
-    #numbers = ''.join(list_num)
-    #return int(numbers)
+# Task: Descending Order
+def descending_order(num: int) -> int:
+    # list_num = []
+    # list_num.extend(str(num))
+    # list_num.sort(reverse=True)
+    # numbers = ''.join(list_num)
+    # return int(numbers)
     return int(''.join(sorted(str(num), reverse=True)))
+
 
 print(descending_order(51))
 
 
-#Rock Paper Scissor
+# Rock Paper Scissor
 def rps(p1, p2):
     moves = ["rock", "scissors", "paper"]
     outcomes = ["Draw!", "Player 1 won!", "Player 2 won!"]
@@ -366,26 +390,29 @@ def rps(p1, p2):
 def billboard(name, price=30):
     return sum(price for _ in name)
 
+
 print(billboard('Python', 20))
 
 
 # Surface Area and Volume Box
-def get_size(w,h,d):
+def get_size(w, h, d):
     area = 2 * (w * h + w * d + h * d)
     volume = w * d * h
     return [area, volume]
 
+
 print(get_size(4, 2, 6))
 
 
-#Formatting decimal places
+# Formatting decimal places
 def two_decimal_places_2(n):
     return round(n, 2)
+
 
 print(two_decimal_places_2(12.23423543543))
 
 
-#Find count of Most Frequent Item in an Array
+# Find count of Most Frequent Item in an Array
 def most_frequent_item_current(collection):
     # count = 0
     #
@@ -397,6 +424,7 @@ def most_frequent_item_current(collection):
     # return count
     return max([collection.count(item) for item in collection])
 
+
 print(most_frequent_item_current([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]))
 
 
@@ -404,13 +432,17 @@ print(most_frequent_item_current([3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3]))
 def two_decimal_places(number):
     return int(number * 100) / 100
 
+
 print(two_decimal_places(10.1289767789))
 print(two_decimal_places(-7488.83485834983))
 print(two_decimal_places(4.653725356))
 
 # Stringy Strings
+
+
 def stringy(size):
     return ('10' * size)[:size]
+
 
 print(stringy(6))
 
@@ -422,7 +454,8 @@ def combine_names(first_name, last_name):
 
 # Comfortable words
 def comfortable_word(word):
-    left_keys = ['q', 'w', 'e', 'r', 't', 'a', 's', 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b']
+    left_keys = ['q', 'w', 'e', 'r', 't', 'a', 's',
+                 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b']
     right_keys = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
     l = True if word[0] in left_keys else False
 
@@ -434,6 +467,7 @@ def comfortable_word(word):
         l = not l
 
     return True
+
 
 print(comfortable_word('yams'))
 print(comfortable_word('test'))
@@ -452,7 +486,8 @@ def find_uniq(arr):
         if value == 1:
             return key
 
-print(find_uniq([ 1, 1, 1, 2, 1, 1 ]))
+
+print(find_uniq([1, 1, 1, 2, 1, 1]))
 
 
 # Highest Scoring Word
@@ -471,12 +506,13 @@ def high(x):
     #         max_word[1] = counter[word]
     #
     # return max_word[0]
-    words=x.split(' ')
+    words = x.split(' ')
     lists = []
     for i in words:
         scores = [sum([ord(char) - 96 for char in i])]
         lists.append(scores)
     return words[lists.index(max(lists))]
+
 
 print(high('man i need a taxi up to ubud'))
 
@@ -497,6 +533,7 @@ def tower_builder(n_floors):
     tower.reverse()
     return tower
 
+
 print(tower_builder(6))
 print(tower_builder(1))
 
@@ -504,6 +541,7 @@ print(tower_builder(1))
 # ASCII Total
 def uni_total(s):
     return sum([ord(char) for char in s])
+
 
 print(uni_total('aaa'))
 
@@ -519,6 +557,7 @@ def solution(s):
             correct_string += char
 
     return correct_string
+
 
 print(solution("helloWorld"))
 print(solution("camelCase"))
@@ -539,6 +578,7 @@ def sort_array(source_array):
         source_array[index[i]] = arr[i]
 
     return source_array
+
 
 print(sort_array([5, 3, 2, 8, 1, 4]))
 
@@ -563,8 +603,9 @@ def find_missing_letter(chars):
         if ord(chars[x]) - ord(chars[x - 1]) != 1:
             return chr(ord(chars[x]) - 1)
 
-print(find_missing_letter(['a','b','c','d','f']))
-print(find_missing_letter(['O','Q','R','S']))
+
+print(find_missing_letter(['a', 'b', 'c', 'd', 'f']))
+print(find_missing_letter(['O', 'Q', 'R', 'S']))
 
 
 # Random case
@@ -578,6 +619,7 @@ def random_case(x):
         else:
             string += char.lower()
     return string
+
 
 print(random_case('Lorem ipsum dolor sit amet, consectetur adipiscing elit'))
 
@@ -594,9 +636,10 @@ def max_product(lst, n_largest_elements):
     from heapq import nlargest
     return reduce(mul, nlargest(n_largest_elements, lst))
 
-print(max_product([10,8,7,9], 3))
+
+print(max_product([10, 8, 7, 9], 3))
 print(max_product([0]*10, 5))
-print(max_product([8,6,4,6], 3))
+print(max_product([8, 6, 4, 6], 3))
 
 
 # Strong Number (Special Numbers Series #2)
@@ -608,6 +651,7 @@ def strong_num(number):
         return "STRONG!!!!"
 
     return "Not Strong !!"
+
 
 print(strong_num(40585))
 
@@ -624,6 +668,7 @@ def re_ordering(text):
     #
     # return ' '.join(correct_text)
     return ' '.join(sorted(text.split(), key=str.islower))
+
 
 print(re_ordering("jojo ddjajdiojdwo ana G nnibiial"))
 
@@ -646,12 +691,14 @@ def cookie(x):
 def shorten_to_date(long_date):
     return long_date[0:long_date.find(',')]
 
+
 print(shorten_to_date("Monday February 2, 8pm"))
 
 
 # Special number (Special number Series #5)
 def special_number(number):
     return "Special!!" if max(str(number)) <= "5" else "NOT!!"
+
 
 print(special_number(9))
 print(special_number(1))
@@ -660,6 +707,7 @@ print(special_number(1))
 # SpeedCode #2 - Array Madness
 def array_madness(a, b):
     return sum([el**2 for el in a]) > sum([el**3 for el in b])
+
 
 print(array_madness([4, 5, 6], [1, 2, 3]))
 
@@ -677,10 +725,11 @@ def _all(seq, fun):
 def contamination(text, char):
     return char * len(text)
 
-print(contamination("abc","z"))
-print(contamination("","z"))
-print(contamination("abc",""))
-print(contamination("//case"," "))
+
+print(contamination("abc", "z"))
+print(contamination("", "z"))
+print(contamination("abc", ""))
+print(contamination("//case", " "))
 
 
 # Fix your code before the garden dies
@@ -709,7 +758,8 @@ def proofread(st):
         if (char_list[i] == '.' and i != len(char_list) - 1):
             char_list[i + 2] = char_list[i + 2].upper()
 
-    return  ''.join(char_list)
+    return ''.join(char_list)
+
 
 print(proofread("SHe wEnt CaNoIenG. Edsfsdfsdf fsf sfd."))
 
@@ -718,9 +768,12 @@ print(proofread("SHe wEnt CaNoIenG. Edsfsdfsdf fsf sfd."))
 def replace_exclamation(st):
     return ''.join('!' if c in 'aeiouAEIOU' else c for c in st)
 
+
 print(replace_exclamation("ABCDE"))
 
 # Task hexlet Ascending sequence
+
+
 def is_continuous_sequence(source):
     if len(source) < 2:
         return False
@@ -738,11 +791,12 @@ def build_query_string(query_string):
 
     return '&'.join(sorted(words))
 
+
 print(build_query_string({'per': 10, 'page': 1}))
 
 
 # Scrabble
-from  collections import Counter
+
 
 def scrabble(sentence, word):
     counter_chars = Counter(sentence.lower())
@@ -752,6 +806,7 @@ def scrabble(sentence, word):
 
     return True
 
+
 print(scrabble('rkqodlw', 'wworld'))
 print(scrabble('scriptingjava', 'JavaScript'))
 
@@ -759,6 +814,7 @@ print(scrabble('scriptingjava', 'JavaScript'))
 # Opposite number
 def opposite(number):
     return number * -1
+
 
 print(opposite(0))
 print(opposite(1))
@@ -773,6 +829,7 @@ def century(year):
     else:
         return int(num + (1 - (num - int(num))))
 
+
 print(century(1705))
 print(century(1700))
 
@@ -781,12 +838,14 @@ print(century(1700))
 def solution(string):
     return string[::-1]
 
+
 print(solution("world"))
 
 
 def maskify(cc):
     return '#' * (len(cc) - 4) + cc[-4:]
-    
+
+
 print(maskify('SF$SDfgsd2eA'))
 print(maskify('SF'))
 
@@ -794,6 +853,7 @@ print(maskify('SF'))
 # Remove First and Last Character
 def remove_char(s):
     return s[1:-1]
+
 
 print(remove_char("hello"))
 
@@ -810,8 +870,9 @@ print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
 
 # How many arguments
 def args_count(*args, **kwargs):
-   return len(args) + len(kwargs)
-    
+    return len(args) + len(kwargs)
+
+
 print(args_count(32, a1=12))
 print(args_count())
 
@@ -819,6 +880,7 @@ print(args_count())
 # Leap Years
 def is_leap_year(year):
     return year % 4 == 0 and (not year % 100 == 0 or year % 400 == 0)
+
 
 print(is_leap_year(2020))
 print(is_leap_year(2100))
@@ -832,8 +894,9 @@ def nb_year(p0, percent, aug, p):
     while p0 < p:
         p0 = p0 + floor(p0 * percent/100) + aug
         years += 1
-        
+
     return years
+
 
 print(nb_year(1500, 5, 100, 5000))
 print(nb_year(1500000, 2.5, 10000, 2000000))
@@ -841,14 +904,15 @@ print(nb_year(1500000, 0.25, 1000, 2000000))
 
 
 # Perfect Number Verifier
-import math
+
+
 def is_perfect(n):
-    if n < 2 or n % 2 != 0: 
+    if n < 2 or n % 2 != 0:
         return False
-    
-    divisors_sum = 1  
+
+    divisors_sum = 1
     sqrt_n = int(math.sqrt(n))
-    
+
     for i in range(2, sqrt_n + 1):
         if n % i == 0:
             divisors_sum += i
@@ -856,6 +920,7 @@ def is_perfect(n):
                 divisors_sum += n // i
 
     return divisors_sum == n
+
 
 print(is_perfect(1))
 print(is_perfect(28))
@@ -867,6 +932,7 @@ def abbrev_name(name):
     words = name.split()
     return f"{words[0][0]}.{words[1][0]}".upper()
 
+
 print(abbrev_name("Sam Harris"))
 
 
@@ -874,6 +940,7 @@ print(abbrev_name("Sam Harris"))
 def filter_list(l):
     numbers = [el for el in l if type(el) is not str]
     return numbers
+
 
 print(filter_list([1, 2, 'a', 'b']))
 
@@ -883,6 +950,7 @@ def find_short(s):
     words = [len(el) for el in s.split()]
     return min(words)
 
+
 print(find_short("bitcoin take over the world maybe who knows perhaps"))
 
 
@@ -890,13 +958,15 @@ print(find_short("bitcoin take over the world maybe who knows perhaps"))
 def positive_sum(arr):
     return sum([i for i in arr if i > 0])
 
-print(positive_sum([1,2,3,4,5]))
+
+print(positive_sum([1, 2, 3, 4, 5]))
 print(positive_sum([]))
 
 
 # Build a square
 def generate_shape(n):
     return '/n'.join('+' * n for _ in range(n))
+
 
 print(generate_shape(3))
 
@@ -909,7 +979,8 @@ def dig_pow(n, p):
         sum += int(str_nums[i]) ** (p + i)
     return int(sum / n) if sum % n == 0 else -1
 
-print(dig_pow(89,1))        
+
+print(dig_pow(89, 1))
 print(dig_pow(92, 1))
 print(dig_pow(46288, 3))
 print(dig_pow(41, 5))
@@ -921,11 +992,12 @@ print(dig_pow(8, 3))
 def find_smallest(numbers, to_return):
     return min(numbers) if to_return == 'value' else numbers.index(min(numbers))
 
-print(find_smallest([5,4,3,2,1],"index"))
+
+print(find_smallest([5, 4, 3, 2, 1], "index"))
 
 
 # Perfect numbers
-def is_perfect(number:int):
+def is_perfect(number: int):
     if number % 2 != 0:
         return False
     count = 1
@@ -933,6 +1005,7 @@ def is_perfect(number:int):
         if number % num == 0:
             count += num
     return count == number
+
 
 print(is_perfect(6))
 print(is_perfect(28))
@@ -947,6 +1020,7 @@ def is_power_of_three(number: int):
     degrees = log(number, 3)
     return degrees == int(degrees)
 
+
 print(is_power_of_three(3))
 print(is_power_of_three(2))
 print(is_power_of_three(9))
@@ -955,7 +1029,7 @@ print(is_power_of_three(1))
 
 
 # Fizz Buzz
-def fizz_buzz(begin:int, end:int):
+def fizz_buzz(begin: int, end: int):
     result = ''
     for num in range(begin, end + 1):
         if num % 3 == 0 and num % 5 == 0:
@@ -967,6 +1041,7 @@ def fizz_buzz(begin:int, end:int):
         else:
             result += f'{str(num)} '
     return result.rstrip()
+
 
 print(fizz_buzz(1, 5))
 print(fizz_buzz(11, 20))
@@ -980,26 +1055,51 @@ def is_happy_ticket(series):
     second_part = sum(result[middle:])
     return first_part == second_part
 
-print(is_happy_ticket('123123')) # True
-print(is_happy_ticket('341801')) # False
+
+print(is_happy_ticket('123123'))  # True
+print(is_happy_ticket('341801'))  # False
 
 
 # Classification of segments
 line1 = ((5, 1), (20, 10))
 
+
 def is_degenerated(line):
     return line[0][0] == line[1][0] and line[0][1] == line[1][1]
+
 
 def is_horizontal(line):
     return line[0][0] != line[1][0] and line[0][1] == line[1][1]
 
+
 def is_vertical(line):
     return line[0][0] == line[1][0] and line[0][1] != line[1][1]
 
+
 def is_inclined(line):
     return line[0][0] != line[1][0] and line[0][1] != line[1][1]
+
 
 print(is_degenerated(line1))
 print(is_horizontal(line1))
 print(is_vertical(line1))
 print(is_inclined(line1))
+
+# Set the alarms up
+
+
+def set_the_alarms_up(time_str, n):
+    hours, minutes = map(int, time_str.split(":"))
+    count_minutes = hours * 60 + minutes
+    time_list = []
+    time_list.append(time_str)
+    for _ in range(1, n):
+        count_minutes += 5
+        hours = (count_minutes // 60) % 24
+        minutes = count_minutes % 60
+        time_list.append(f"{hours:02d}:{minutes:02d}")
+
+    return time_list
+
+
+print(set_the_alarms_up("23:55", 3))
