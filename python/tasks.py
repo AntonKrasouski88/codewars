@@ -1127,3 +1127,14 @@ def remove_every_other(my_list):
     return my_list[::2]
 
 print(remove_every_other(['Hello', 'Goodbye', 'Hello Again', 'Hello', 'Smile']))
+
+
+# Remove First and Last Character Part Two
+def array(string):
+    return " ".join(string.split(',')[1:-1]) or None
+
+
+print(array('1,2,3,4,5'))
+print(array(''))
+print(array('1'))
+print(array('1, 2'))
