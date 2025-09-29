@@ -1120,3 +1120,10 @@ print(("eNgliSh")) # True
 print(("1234#$%%eNglish ;k9")) # True
 print(("EGNlihs")) # False
 print(("1234englihs**")) # False
+
+
+#Remove Elements
+def remove_every_other(my_list):
+    return my_list[::2]
+
+print(remove_every_other(['Hello', 'Goodbye', 'Hello Again', 'Hello', 'Smile']))
