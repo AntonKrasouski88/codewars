@@ -265,12 +265,12 @@ print(arithmetic(1, 2, "add"))
 
 
 # Task: Sort numbers
-def solutions(nums):
+def solution_sorted(nums):
     return sorted(nums) if nums else []
 
 
-print(solutions([1, 2, 3, 10, 5]))
-print(solutions(None))
+print(solution_sorted([1, 2, 3, 10, 5]))
+print(solution_sorted(None))
 
 
 # Task: Double Every Other
@@ -547,7 +547,7 @@ print(uni_total('aaa'))
 
 
 # Break camelCase
-def solution(s):
+def solutions(s):
     correct_string = ''
 
     for char in s:
@@ -559,9 +559,9 @@ def solution(s):
     return correct_string
 
 
-print(solution("helloWorld"))
-print(solution("camelCase"))
-print(solution("breakCamelCase"))
+print(solutions("helloWorld"))
+print(solutions("camelCase"))
+print(solutions("breakCamelCase"))
 
 
 # Sort the odd
@@ -906,7 +906,7 @@ print(nb_year(1500000, 0.25, 1000, 2000000))
 # Perfect Number Verifier
 
 
-def is_perfect(n):
+def is_perfect_solution(n):
     if n < 2 or n % 2 != 0:
         return False
 
@@ -922,9 +922,9 @@ def is_perfect(n):
     return divisors_sum == n
 
 
-print(is_perfect(1))
-print(is_perfect(28))
-print(is_perfect(25))
+print(is_perfect_solution(1))
+print(is_perfect_solution(28))
+print(is_perfect_solution(25))
 
 
 # Abbreviate a Two Word Name
@@ -1103,3 +1103,20 @@ def set_the_alarms_up(time_str, n):
 
 
 print(set_the_alarms_up("23:55", 3))
+
+
+# Do you speak English
+def sp_eng(sentence):
+    return 'english' in sentence.lower()
+
+
+print(("english")) # True
+print(("egnlish")) # False
+print(("engliish")) # False
+print(("1234egn lis;h")) # False
+print(("1234english ;k")) # True
+print(("English")) # True
+print(("eNgliSh")) # True
+print(("1234#$%%eNglish ;k9")) # True
+print(("EGNlihs")) # False
+print(("1234englihs**")) # False
