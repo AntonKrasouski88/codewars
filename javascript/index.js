@@ -1875,3 +1875,11 @@ function ensureQuestion(s) {
 
 console.log(ensureQuestion("Yes"));
 console.log(ensureQuestion("No?"));
+
+//Merging sorted integer arrays (without duplicates)
+const mergeArrays = (a, b) => {
+  const elments = new Set([...a, ...b]);
+  return [...elments].sort((a, b) => a - b)
+}
+
+console.log(mergeArrays([1, 3, 5, 10], [2, 4, 6]));
