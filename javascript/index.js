@@ -1866,3 +1866,12 @@ function getAge(inputString) {
 }
 
 console.log(getAge("4 years old"));
+
+
+// Ensure question
+function ensureQuestion(s) {
+  return s.endsWith('?') ? s : `${s}?`
+}
+
+console.log(ensureQuestion("Yes"));
+console.log(ensureQuestion("No?"));
