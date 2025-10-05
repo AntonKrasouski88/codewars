@@ -1138,3 +1138,11 @@ print(array('1,2,3,4,5'))
 print(array(''))
 print(array('1'))
 print(array('1, 2'))
+
+# Remove BMW
+def remove_bmw(string):
+    if type(string) != str:
+        return TypeError("This program only works for text.")
+    return "".join([el for el in list(string) if el not in "bmwBMW"])
+    
+print(remove_bmw("bmwvolvoBMW"))
