@@ -1154,3 +1154,7 @@ def generate_pairs(n):
 
 print(generate_pairs(2))
 print(generate_pairs(0))
+
+
+# Challenge: True without return
+solve = lambda: True # type: ignore
