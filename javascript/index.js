@@ -1859,18 +1859,16 @@ console.log(
 console.log(flatten([[[1, 2, 3]]])); // => [[1,2,3]]
 console.log(flatten([1, 2, 3])); // => [1,2,3]
 
-
 // Parse nice from char problem
 function getAge(inputString) {
-  return Number(inputString[0])
+  return Number(inputString[0]);
 }
 
 console.log(getAge("4 years old"));
 
-
 // Ensure question
 function ensureQuestion(s) {
-  return s.endsWith('?') ? s : `${s}?`
+  return s.endsWith("?") ? s : `${s}?`;
 }
 
 console.log(ensureQuestion("Yes"));
@@ -1879,7 +1877,16 @@ console.log(ensureQuestion("No?"));
 //Merging sorted integer arrays (without duplicates)
 const mergeArrays = (a, b) => {
   const elments = new Set([...a, ...b]);
-  return [...elments].sort((a, b) => a - b)
-}
+  return [...elments].sort((a, b) => a - b);
+};
 
 console.log(mergeArrays([1, 3, 5, 10], [2, 4, 6]));
+
+//Duplicate arguments
+function solution(...rest) {
+  const elements = new Set(rest);
+  return elements.size !== rest.length;
+}
+
+console.log(solution("1", "2", "3", "2"));
+console.log(solution(1, 2, 3, 4));
