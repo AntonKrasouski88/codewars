@@ -1890,3 +1890,20 @@ function solution(...rest) {
 
 console.log(solution("1", "2", "3", "2"));
 console.log(solution(1, 2, 3, 4));
+
+//Head, Tail, Init and Last
+function head(a) {
+  return a[0];
+}
+
+function last(a) {
+  return a.at(-1);
+}
+
+function init(a) {
+  return a.slice(0, -1);
+}
+
+function tail(a) {
+  return a.slice(1);
+}
