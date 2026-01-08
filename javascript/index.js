@@ -303,7 +303,7 @@ console.log(findMissing([1, 2, 3], [1, 3]));
     for(let i = 0; i < arr1.length; i++) {
         wordsSort[+arr2[i][0] - 1] = arr1[i];
     }
-    
+
     return wordsSort.join(' ');
 }
 
@@ -1907,3 +1907,13 @@ function init(a) {
 function tail(a) {
   return a.slice(1);
 }
+
+//Quadratic Enumarator
+
+//Will there be enough space?
+function enough(cap, on, wait) {
+  return cap - on > wait ? 0 : wait - cap + on;
+}
+
+console.log(enough(10, 5, 5));
+console.log(enough(100, 60, 50));
