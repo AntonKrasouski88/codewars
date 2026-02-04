@@ -1942,3 +1942,17 @@ function minValue(values) {
 }
 
 console.log(minValue([1, 9, 3, 1, 7, 4, 6, 6, 7]));
+
+//Task Alternate capitalization
+function capitalize(s) {
+  let result1 = "";
+  let result2 = "";
+  for (let i = 0; i < s.length; i++) {
+    result1 += i % 2 == 0 ? s[i].toUpperCase() : s[i].toLowerCase();
+    result2 += i % 2 == 0 ? s[i].toLowerCase() : s[i].toUpperCase();
+  }
+
+  return [result1, result2];
+}
+
+console.log(capitalize("abcdef"));
