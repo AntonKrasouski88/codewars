@@ -1956,3 +1956,21 @@ function capitalize(s) {
 }
 
 console.log(capitalize("abcdef"));
+
+// Flatten and sort an array
+function flattenAndSort(array) {
+  if (!array.length) {
+    return array;
+  }
+
+  return array.flat().sort((a, b) => a - b);
+}
+
+console.log(
+  flattenAndSort([
+    [3, 2, 1],
+    [7, 9, 8],
+    [6, 4, 5],
+  ]),
+);
+console.log(flattenAndSort([[], []]));
