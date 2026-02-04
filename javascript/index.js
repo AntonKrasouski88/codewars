@@ -28,7 +28,7 @@ function isValidWalk(walk) {
 
 console.log(isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"]));
 console.log(
-  isValidWalk(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"])
+  isValidWalk(["w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e"]),
 );
 console.log(isValidWalk(["n", "n", "n", "s", "n", "s", "n", "s", "n", "s"]));
 console.log(isValidWalk(["w"]));
@@ -71,7 +71,7 @@ console.log(
     [10, 0],
     [3, 5],
     [5, 8],
-  ])
+  ]),
 );
 console.log(
   number([
@@ -81,7 +81,7 @@ console.log(
     [12, 2],
     [6, 1],
     [7, 10],
-  ])
+  ]),
 );
 console.log(
   number([
@@ -91,7 +91,7 @@ console.log(
     [12, 2],
     [6, 1],
     [7, 8],
-  ])
+  ]),
 );
 console.log(number([[0, 0]]));
 
@@ -253,14 +253,31 @@ console.log(
       "b",
       "c",
     ],
-    ["c", "c", "c", "c", "", "a", "a", "b", "a", "a", "", "a", "a", "", "", "b"]
-  )
+    [
+      "c",
+      "c",
+      "c",
+      "c",
+      "",
+      "a",
+      "a",
+      "b",
+      "a",
+      "a",
+      "",
+      "a",
+      "a",
+      "",
+      "",
+      "b",
+    ],
+  ),
 );
 console.log(
   checkExam(
     ["c", "b", "c", "b", "c", "a", "a", "a", "a", "c", "c", "a"],
-    ["a", "a", "", "b", "", "a", "", "b", "a", "", "", "b"]
-  )
+    ["a", "a", "", "b", "", "a", "", "b", "a", "", "", "b"],
+  ),
 );
 
 //Task: Sentence Smash
@@ -396,7 +413,7 @@ console.log(
     [10, 11, 12, 13, 14],
     [20, 21, 22, 23, 24],
     [30, 31, 32, 33, 34],
-  ])
+  ]),
 );
 
 //Task: Leap Years
@@ -546,8 +563,8 @@ console.log(
       ["HGR", 74],
       ["BAHT", 74],
     ],
-    2
-  )
+    2,
+  ),
 );
 
 //Task: Sort array by string length
@@ -562,7 +579,8 @@ console.log(sortByLength(["Beg", "Life", "I", "To"]));
 function filterHomogenous(arrays) {
   return arrays.filter(
     (arr) =>
-      arr.length !== 0 && arr.every((el, _, arr) => typeof el === typeof arr[0])
+      arr.length !== 0 &&
+      arr.every((el, _, arr) => typeof el === typeof arr[0]),
   );
 }
 
@@ -771,7 +789,7 @@ console.log(
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9],
-  ])
+  ]),
 );
 
 console.log(
@@ -781,7 +799,7 @@ console.log(
     [1, 8, 5, 6, 2],
     [1, 5, 2, 1, 2],
     [1, 8, 2, 6, 1],
-  ])
+  ]),
 );
 
 //Task: Remove the minimum
@@ -925,7 +943,7 @@ console.log(
     [3, 5, 3],
     [10, 10, 3],
     [3, 5, 3],
-  ])
+  ]),
 );
 
 //Task: game map of the island
@@ -970,8 +988,8 @@ console.log(
       ["water", "water", "water", "water"],
     ],
     [1, 1],
-    "north"
-  )
+    "north",
+  ),
 );
 
 //Task: Chain me
@@ -1183,7 +1201,7 @@ function tram(stops, descending, onboarding) {
 console.log(tram(4, [0, 2, 4, 4], [3, 5, 2, 0]));
 console.log(tram(2, [0, 2, 4, 4], [3, 5, 2, 0]));
 console.log(
-  tram(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+  tram(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]),
 );
 
 //Task: Contamination#1 String
@@ -1209,8 +1227,8 @@ console.log(
       690, -380, -812, -674, 635, 833, 422, 12, -640, 908, 996, 449, -502, 785,
       619, -541, 895, -806,
     ],
-    -480
-  )
+    -480,
+  ),
 );
 
 //Length of missing array
@@ -1252,7 +1270,7 @@ console.log(
   dataReverse([
     1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1,
     0, 1, 0, 1, 0, 1, 0,
-  ])
+  ]),
 );
 
 // Do I get a bonus?
@@ -1398,8 +1416,8 @@ const genDiff = (firstObj, secondObj) => {
 console.log(
   genDiff(
     { one: "eon", two: "two", four: true },
-    { two: "own", zero: 4, four: true }
-  )
+    { two: "own", zero: 4, four: true },
+  ),
 );
 
 // Matrix mirroring
@@ -1421,7 +1439,7 @@ console.log(
     [41, 42, 43, 44, 45, 46],
     [51, 52, 53, 54, 55, 56],
     [61, 62, 63, 64, 65, 66],
-  ])
+  ]),
 );
 
 // Proof read
@@ -1445,15 +1463,15 @@ function proofread(str) {
 
 console.log(
   proofread(
-    "ChzeeiQCkKMgei PUCrjqNieXwoi vugPvpCy ZEciEHkDdmQF. IEAhBEIjFtY e GWjCBGH hcGUJEit. BmDGeIdZ qEiHZieYlUeI GCrRpqjw EZxlkWrieieciE LxVK qEi."
-  )
+    "ChzeeiQCkKMgei PUCrjqNieXwoi vugPvpCy ZEciEHkDdmQF. IEAhBEIjFtY e GWjCBGH hcGUJEit. BmDGeIdZ qEiHZieYlUeI GCrRpqjw EZxlkWrieieciE LxVK qEi.",
+  ),
 );
 console.log(proofread("He haD iEght ShOTs of CAffIEne"));
 console.log(proofread("JFqVaYeHol EAieakielHIeeIxQ TConDt ftJBgwUzJZUE."));
 console.log(
   proofread(
-    "Vtleis hdwvg xqkayppnvcv gkllrehnyzj nxfcrs eiyevtetreiq yzrweeieipbgus eixzacwmlh. Slefueiopocu."
-  )
+    "Vtleis hdwvg xqkayppnvcv gkllrehnyzj nxfcrs eiyevtetreiq yzrweeieipbgus eixzacwmlh. Slefueiopocu.",
+  ),
 );
 
 // Valid Parentheses
@@ -1496,7 +1514,7 @@ console.log(formatWords(["one"]));
 function deleteDigit(n) {
   const arr = String(n).split("");
   return Math.max(
-    ...arr.map((_, i) => Number(arr.filter((_, j) => j !== i).join("")))
+    ...arr.map((_, i) => Number(arr.filter((_, j) => j !== i).join(""))),
   );
 }
 
@@ -1589,8 +1607,8 @@ function getTopHashtags(str) {
 
 console.log(
   getTopHashtags(
-    "Игра престолов - сериал, основанный на романах Джорджа Мартина, рассказывающий о борьбе за власть в вымышленном мире Вестероса"
-  )
+    "Игра престолов - сериал, основанный на романах Джорджа Мартина, рассказывающий о борьбе за власть в вымышленном мире Вестероса",
+  ),
 );
 
 //Regexp Basic - is it a digit
@@ -1632,16 +1650,16 @@ function isLochNessMonser(s) {
 
 console.log(
   isLochNessMonser(
-    "Your girlscout cookies are ready to ship. Your total comes to tree fiddy"
-  )
+    "Your girlscout cookies are ready to ship. Your total comes to tree fiddy",
+  ),
 );
 console.log(
   isLochNessMonser(
-    "I'm from Scottland. I moved here to be with my family sir. Please, $3.50 would go a long way to help me find them"
-  )
+    "I'm from Scottland. I moved here to be with my family sir. Please, $3.50 would go a long way to help me find them",
+  ),
 );
 console.log(
-  isLochNessMonser("Hello, I come from the year 3150 to bring you good news!")
+  isLochNessMonser("Hello, I come from the year 3150 to bring you good news!"),
 );
 
 //Regex count lowercase letters
@@ -1854,7 +1872,7 @@ console.log(
     [1, 2, 3],
     ["a", "b", "c"],
     [1, 2, 3],
-  ])
+  ]),
 ); // => [1,2,3,"a","b","c",1,2,3]
 console.log(flatten([[[1, 2, 3]]])); // => [[1,2,3]]
 console.log(flatten([1, 2, 3])); // => [1,2,3]
@@ -1917,3 +1935,10 @@ function enough(cap, on, wait) {
 
 console.log(enough(10, 5, 5));
 console.log(enough(100, 60, 50));
+
+//Form the minimum
+function minValue(values) {
+  return Number([...new Set(values)].sort((a, b) => a - b).join(""));
+}
+
+console.log(minValue([1, 9, 3, 1, 7, 4, 6, 6, 7]));
