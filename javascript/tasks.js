@@ -31,3 +31,12 @@ console.log(inAscOrder([1, 2, 4, 7, 19]));
 console.log(inAscOrder([1, 6, 10, 18, 2, 4, 20]));
 console.log(inAscOrder([1]));
 console.log(inAscOrder([]));
+
+// Largest pair sum in array
+function largestPairSum(numbers) {
+  numbers.sort((a, b) => a - b);
+  return numbers.at(-1) + numbers.at(-2);
+}
+
+console.log(largestPairSum([-100, -29, -24, -19, 19]));
+console.log(largestPairSum([10, 14, 2, 23, 19]));
