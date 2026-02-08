@@ -40,3 +40,20 @@ function largestPairSum(numbers) {
 
 console.log(largestPairSum([-100, -29, -24, -19, 19]));
 console.log(largestPairSum([10, 14, 2, 23, 19]));
+
+// Count characters in your string
+function count(string) {
+  const result = {};
+
+  for (let char of string) {
+    if (Object.hasOwn(result, char)) {
+      result[char] += 1;
+    } else {
+      result[char] = 1;
+    }
+  }
+
+  return result;
+}
+
+console.log(count("abc"));
