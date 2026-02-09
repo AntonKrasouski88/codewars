@@ -62,3 +62,10 @@ console.log(count("abc"));
 function animal(obj) {
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs`;
 }
+
+//Add property to every object in array
+function addPropertyObject(arr) {
+  for (let obj of arr) {
+    obj["usersAnswer"] = null;
+  }
+}
