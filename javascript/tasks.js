@@ -69,3 +69,12 @@ function addPropertyObject(arr) {
     obj["usersAnswer"] = null;
   }
 }
+
+//Add a property to an object
+function addProperty(obj, prop, value) {
+  if (!Object.hasOwn(obj, prop)) {
+    obj[prop] = value;
+  } else {
+    throw new Error("The property already exists");
+  }
+}
