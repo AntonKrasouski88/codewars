@@ -78,3 +78,33 @@ function addProperty(obj, prop, value) {
     throw new Error("The property already exists");
   }
 }
+
+//Valid Braces
+function validBraces(braces) {
+  const openBraces = ["(", "{", "["];
+  const closeBraces = [")", "}", "]"];
+  const strBraces = [];
+
+  for (let br of braces) {
+    if (openBraces.includes(br)) {
+      strBraces.push(br);
+    }
+
+    if (closeBraces.includes(br)) {
+      const lastBraces = strBraces.at(-1);
+      if (openBraces.indexOf(lastBraces) !== closeBraces.indexOf(br)) {
+        return false;
+      } else {
+        strBraces.pop();
+      }
+    }
+  }
+
+  return strBraces.length === 0;
+}
+
+console.log(validBraces("(){}[]"));
+console.log(validBraces("([{}])"));
+console.log(validBraces("(}"));
+console.log(validBraces("[(])"));
+console.log(validBraces("[({})](]"));
