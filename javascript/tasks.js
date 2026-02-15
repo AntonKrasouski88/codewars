@@ -108,3 +108,30 @@ console.log(validBraces("([{}])"));
 console.log(validBraces("(}"));
 console.log(validBraces("[(])"));
 console.log(validBraces("[({})](]"));
+
+//Delete occurrences of an element if it occurs more than n times
+function deleteNth(arr, n) {
+  /*   const obj = {};
+  const result = [];
+
+  for (let el of arr) {
+    if (Object.hasOwn(obj, `${el}`)) {
+      obj[`${el}`] += 1;
+      if (obj[`${el}`] <= n) {
+        result.push(el);
+      }
+    } else {
+      obj[`${el}`] = 1;
+      result.push(el);
+    }
+  }
+
+  return result; */
+
+  const obj = {};
+  return arr.filter((el) => (obj[el] = obj[el] + 1 || 1) <= n);
+}
+
+console.log(deleteNth([20, 37, 20, 21], 1));
+console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3));
+console.log(deleteNth([12, 39, 19, 39, 39, 19, 12], 1));
