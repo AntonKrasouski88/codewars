@@ -135,3 +135,16 @@ function deleteNth(arr, n) {
 console.log(deleteNth([20, 37, 20, 21], 1));
 console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3));
 console.log(deleteNth([12, 39, 19, 39, 39, 19, 12], 1));
+
+//Sum of Minimums
+function sumOfMinimums(arr) {
+  return arr.reduce((acc, el) => (acc += Math.min(...el)), 0);
+}
+
+console.log(
+  sumOfMinimums([
+    [7, 9, 8, 6, 2],
+    [6, 3, 5, 4, 3],
+    [5, 8, 7, 4, 5],
+  ]),
+);
