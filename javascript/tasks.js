@@ -148,3 +148,29 @@ console.log(
     [5, 8, 7, 4, 5],
   ]),
 );
+
+//First non-consecutive number
+function firstNonRepeatingLetter(s) {
+  /*   const obj = s.split("").reduce((acc, el) => {
+    let char = el.toLowerCase();
+    acc[char] = acc[char] + 1 || 1;
+    return acc;
+  }, {});
+
+  for (let chr of s) {
+    if (obj[chr.toLowerCase()] === 1) {
+      return chr;
+    }
+  }
+
+  return ''; */
+  const string = s.toLowerCase();
+  for (let char of string) {
+    if (string.indexOf(char) === string.lastIndexOf(char)) {
+      return s[string.indexOf(char)];
+    }
+  }
+}
+
+console.log(firstNonRepeatingLetter("stress"));
+console.log(firstNonRepeatingLetter("Go hang a salami, I'm a lasagna hog!"));
