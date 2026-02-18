@@ -174,3 +174,19 @@ function firstNonRepeatingLetter(s) {
 
 console.log(firstNonRepeatingLetter("stress"));
 console.log(firstNonRepeatingLetter("Go hang a salami, I'm a lasagna hog!"));
+
+//Twisted Sum
+function twistedSum(n) {
+  let result = 0;
+
+  for (let i = 0; i <= n; i++) {
+    const sum = String(i)
+      .split("")
+      .reduce((acc, el) => acc + Number(el), 0);
+    result += sum;
+  }
+
+  return result;
+}
+
+console.log(twistedSum(12));
