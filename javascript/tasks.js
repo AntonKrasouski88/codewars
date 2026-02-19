@@ -190,3 +190,10 @@ function twistedSum(n) {
 }
 
 console.log(twistedSum(12));
+
+//Remove All The Marked Elements of a List
+function removeMarkedElements(integer_list, values_list) {
+  return integer_list.filter((el) => !values_list.includes(el));
+}
+
+console.log(removeMarkedElements([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
