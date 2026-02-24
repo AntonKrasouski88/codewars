@@ -197,3 +197,10 @@ function removeMarkedElements(integer_list, values_list) {
 }
 
 console.log(removeMarkedElements([1, 1, 2, 3, 1, 2, 3, 4], [1, 3]));
+
+//Is undefined
+function isUndefined(value) {
+  return value === undefined;
+}
+
+console.log(isUndefined(undefined));
