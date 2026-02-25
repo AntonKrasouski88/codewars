@@ -204,3 +204,19 @@ function isUndefined(value) {
 }
 
 console.log(isUndefined(undefined));
+
+//Only one
+function onlyOne(...args) {
+  /*  if (rest.length === 0) {
+    return false;
+  }
+  let result = 0;
+  for (let value of rest) {
+    if (value) {
+      result++;
+    }
+  }
+
+  return result === 1; */
+  return args.filter(Boolean).length === 1;
+}
