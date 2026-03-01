@@ -220,3 +220,13 @@ function onlyOne(...args) {
   return result === 1; */
   return args.filter(Boolean).length === 1;
 }
+
+//Orthogonal Vectors
+function isOrthogonal(u, v) {
+  return !u.reduce((acc, el, i) => (acc += el * v[i]), 0);
+}
+
+console.log(isOrthogonal([1, 2], [2, 1]));
+console.log(isOrthogonal([1, -2], [2, 1]));
+console.log(isOrthogonal([7, 8], [7, -6]));
+console.log(isOrthogonal([-13, -26], [-8, 4]));
