@@ -230,3 +230,17 @@ console.log(isOrthogonal([1, 2], [2, 1]));
 console.log(isOrthogonal([1, -2], [2, 1]));
 console.log(isOrthogonal([7, 8], [7, -6]));
 console.log(isOrthogonal([-13, -26], [-8, 4]));
+
+//First Fibonacci
+function solution(first, second) {
+  const num = second - first;
+  if (num < 0 || num > first) {
+    return [first, second];
+  } else {
+    return solution(num, first);
+  }
+}
+
+console.log(solution(398, 644));
+console.log(solution(15, 28));
+console.log(solution(340, 550));
