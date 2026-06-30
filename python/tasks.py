@@ -1158,3 +1158,15 @@ print(generate_pairs(0))
 
 # Challenge: True without return
 solve = lambda: True # type: ignore
+
+
+# Chessboard
+n, m = [int(el) for el in input().split()]
+matrix = [['.' for _ in range(m)] for _ in range(n)]
+
+for i in range(n):
+    for j in range(1 - i % 2, m, 2):
+        matrix[i][j] = '*'
+
+for el in matrix:
+    print(*el)
